@@ -4,6 +4,7 @@ import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
 
 const Home = lazy(() => import('../pages/Home'));
+const LearningPage = lazy(() => import('../pages/learning/LearningPage'));
 const CoursePage = lazy(() => import('../pages/course/CoursePage'));
 const CurriculumPage = lazy(() => import('../pages/curriculum/CurriculumPage'));
 const ToolsPage = lazy(() => import('../pages/tools/ToolsPage'));
@@ -30,6 +31,7 @@ export default function PublicLayout() {
         <Suspense fallback={<Loading />}>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/learning" element={<LearningPage />} />
             <Route path="/course" element={<CoursePage />} />
             <Route path="/curriculum" element={<CurriculumPage />} />
             <Route path="/tools" element={<ToolsPage />} />

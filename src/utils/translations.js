@@ -1,7 +1,7 @@
 const translations = {
   ko: {
     nav: {
-      home: '홈',
+      learning: '학습하기',
       course: '과정소개',
       curriculum: '커리큘럼',
       tools: '실습도구',
@@ -78,6 +78,10 @@ const translations = {
       ctaBtn1: '과정 살펴보기',
       ctaBtn2: '실습자료 보기',
     },
+    learning: {
+      title: '학습하기',
+      subtitle: 'AI Agent와 생성형 AI의 핵심 이론부터 실습까지, 체계적인 학습 콘텐츠를 제공합니다',
+    },
     course: {
       title: '과정소개',
       subtitle: '실무형 AI Agent 기반 업무혁신 워크숍의 목적, 대상, 기대효과를 안내합니다',
@@ -135,7 +139,7 @@ const translations = {
   },
   en: {
     nav: {
-      home: 'Home',
+      learning: 'Learning',
       course: 'Course',
       curriculum: 'Curriculum',
       tools: 'Tools',
@@ -211,6 +215,10 @@ const translations = {
       ctaDesc: 'An AI Agent learning platform for research, documentation, automation, and ideation.',
       ctaBtn1: 'Explore Courses',
       ctaBtn2: 'View Materials',
+    },
+    learning: {
+      title: 'Learning',
+      subtitle: 'Comprehensive learning content from core AI Agent and Generative AI theory to hands-on practice',
     },
     course: {
       title: 'Course Overview',

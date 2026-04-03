@@ -5,6 +5,7 @@
 | 경로 | 컴포넌트 | 설명 |
 |------|----------|------|
 | `/` | Home.jsx | 메인 랜딩 페이지 |
+| `/learning` | LearningPage.jsx | 학습하기 |
 | `/course` | CoursePage.jsx | 과정소개 |
 | `/curriculum` | CurriculumPage.jsx | 커리큘럼 |
 | `/tools` | ToolsPage.jsx | 실습도구 |
@@ -36,6 +37,39 @@
 4. **대상 청중 섹션** - 5개 타겟 (공공기관, 발전사, AX담당, 관리자, 비개발직군)
 5. **통계 섹션** - 4개 수치 (4 커리큘럼, 14+ 템플릿, 14+ 사례, 28+ 교육시간)
 6. **CTA 섹션** - 과정 탐색, 자료 보기 버튼
+
+---
+
+## 1-1. LearningPage (학습하기)
+
+**파일**: `src/pages/learning/LearningPage.jsx`
+
+### 사이드바 + 콘텐츠 레이아웃 (8개 섹션)
+
+| 섹션 ID | 한국어 | 영어 | 아이콘 |
+|---------|--------|------|--------|
+| `overview` | 학습 안내 | Learning Guide | fa-compass |
+| `ai-basics` | 생성형 AI의 이해 | Understanding Generative AI | fa-microchip |
+| `ai-agent` | AI Agent 개론 | AI Agent Introduction | fa-robot |
+| `agent-types` | AI Agent 유형과 구조 | Agent Types & Architecture | fa-diagram-project |
+| `prompt-theory` | 프롬프트 엔지니어링 | Prompt Engineering Theory | fa-pencil-ruler |
+| `task-decomposition` | 업무 분해 방법론 | Task Decomposition | fa-sitemap |
+| `advanced-concepts` | 심화 개념 | Advanced Concepts | fa-layer-group |
+| `learning-path` | 학습 로드맵 | Learning Roadmap | fa-route |
+
+### 섹션별 콘텐츠 요약
+
+1. **학습 안내** - 플랫폼 소개, 학습 경로 안내, 전체 콘텐츠 통계 4카드, 기존 페이지 바로가기 4개
+2. **생성형 AI의 이해** - 정의, LLM 원리, 주요 기능 4가지, 한계와 환각, 기존 SW 비교표
+3. **AI Agent 개론** - 정의, 에이전틱 AI 개념, GenAI vs Agent 비교표, 중요성 4가지, 적용 사례 4개
+4. **AI Agent 유형과 구조** - 4대 구성요소, 3가지 유형, 싱글 vs 멀티 비교표, 아키텍처 예시
+5. **프롬프트 엔지니어링** - 5요소 구조, 핵심 기법 6가지, 안티패턴 비교표, `/prompts` 연결
+6. **업무 분해 방법론** - IPO 프레임워크, 4단계 방법론, 주간보고 분해 예시표, `/materials` 연결
+7. **심화 개념** - RAG, Function Calling, 멀티 에이전트, AI Agent 플랫폼 4종
+8. **학습 로드맵** - 4단계 학습 경로, 전체 콘텐츠 8개 바로가기, CTA
+
+### 재사용 CSS 클래스
+`content-page`, `content-page-layout`, `content-sidebar`, `sidebar-nav-btn`, `content-card`, `framework-grid`, `framework-item`, `info-box`, `info-box.tip`, `example-box`
 
 ---
 

@@ -49,8 +49,8 @@ export default function Navbar() {
 
           <ul className="nav-links">
             <li className="nav-item">
-              <Link to="/" className={`nav-link ${location.pathname === '/' ? 'active' : ''}`}>
-                {t('nav.home')}
+              <Link to="/learning" className={`nav-link ${location.pathname === '/learning' ? 'active' : ''}`}>
+                {t('nav.learning')}
               </Link>
             </li>
             <li className="nav-item">
@@ -147,7 +147,7 @@ export default function Navbar() {
 
       <div className={`mobile-menu ${isMobileMenuOpen ? 'open' : ''}`} id="mobile-menu" aria-hidden={!isMobileMenuOpen}>
         <ul className="mobile-nav-links">
-          <li><Link to="/" className="mobile-nav-link">{t('nav.home')}</Link></li>
+          <li><Link to="/learning" className="mobile-nav-link">{t('nav.learning')}</Link></li>
           <li><Link to="/course" className="mobile-nav-link">{t('nav.course')}</Link></li>
           <li><Link to="/curriculum" className="mobile-nav-link">{t('nav.curriculum')}</Link></li>
           <li><Link to="/tools" className="mobile-nav-link">{t('nav.tools')}</Link></li>

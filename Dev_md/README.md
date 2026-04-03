@@ -22,7 +22,7 @@
 |------|------|
 | [ARCHITECTURE.md](./ARCHITECTURE.md) | 기술 아키텍처 및 스택 |
 | [FILE_STRUCTURE.md](./FILE_STRUCTURE.md) | 전체 파일 구조 |
-| [PAGES.md](./PAGES.md) | 페이지별 상세 문서 (10개 페이지) |
+| [PAGES.md](./PAGES.md) | 페이지별 상세 문서 (11개 페이지) |
 | [COMPONENTS.md](./COMPONENTS.md) | 컴포넌트 상세 문서 |
 | [STYLING.md](./STYLING.md) | CSS 디자인 시스템 문서 |
 | [FEATURES.md](./FEATURES.md) | 기능 상세 문서 |
@@ -52,9 +52,8 @@ npm run deploy
 
 ## 핵심 수치
 
-- **총 파일 수**: 52개 소스 파일
-- **총 코드 라인**: 13,774줄
-- **페이지 수**: 10개 (lazy-loaded)
+- **총 파일 수**: 53개 소스 파일
+- **페이지 수**: 11개 (lazy-loaded)
 - **CSS 파일 수**: 13개
 - **빌드 크기**: vendor 230KB + app 210KB (gzip ~130KB)
 - **빌드 시간**: ~385ms

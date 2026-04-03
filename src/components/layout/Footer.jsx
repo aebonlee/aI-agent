@@ -19,6 +19,7 @@ export default function Footer() {
           <div className="footer-links">
             <h4>{t('footer.quickLinks')}</h4>
             <ul className="footer-link-list">
+              <li><Link to="/learning">{t('nav.learning')}</Link></li>
               <li><Link to="/course">{t('nav.course')}</Link></li>
               <li><Link to="/curriculum">{t('nav.curriculum')}</Link></li>
               <li><Link to="/materials">{t('nav.materials')}</Link></li>

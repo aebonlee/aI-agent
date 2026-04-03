@@ -57,6 +57,8 @@ aI-agent/
 │   │   ├── NotFound.jsx             # 404 페이지
 │   │   ├── auth/
 │   │   │   └── LoginPage.jsx        # 로그인 (Google + Kakao)
+│   │   ├── learning/
+│   │   │   └── LearningPage.jsx     # 학습하기 (8섹션 사이드바)
 │   │   ├── cases/
 │   │   │   └── CasesPage.jsx        # 산업·기관 사례 (5카테고리, 10사례)
 │   │   ├── course/
@@ -108,7 +110,7 @@ aI-agent/
 
 | 분류 | 파일 수 |
 |------|---------|
-| 페이지 컴포넌트 | 11개 (.jsx) |
+| 페이지 컴포넌트 | 12개 (.jsx) |
 | 공통 컴포넌트 | 5개 (.jsx) |
 | 레이아웃 | 1개 (.jsx) |
 | 컨텍스트 | 3개 (.jsx) |
@@ -118,7 +120,7 @@ aI-agent/
 | 정적 자산 | 4개 |
 | 스크립트 | 1개 |
 | 문서 | 11개 |
-| **총합** | **58개** |
+| **총합** | **59개** |
 
 ## 빌드 출력 (dist/)
 
@@ -142,6 +144,7 @@ dist/
     ├── PromptsPage-*.js             # 13.70 KB
     ├── CasesPage-*.js               # 10.83 KB
     ├── ResultsPage-*.js             # 13.86 KB
+    ├── LearningPage-*.js             # 56.74 KB
     ├── FaqPage-*.js                 # 9.27 KB
     ├── LoginPage-*.js               # 2.46 KB
     ├── NotFound-*.js                # 1.10 KB

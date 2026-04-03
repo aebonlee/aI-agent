@@ -10,7 +10,7 @@ export const SITE_CONFIG = {
 };
 
 export const MENU_ITEMS = [
-  { id: 'home', path: '/', nameKo: '홈', nameEn: 'Home', icon: 'fa-house' },
+  { id: 'learning', path: '/learning', nameKo: '학습하기', nameEn: 'Learning', icon: 'fa-book-open-reader' },
   { id: 'course', path: '/course', nameKo: '과정소개', nameEn: 'Course', icon: 'fa-book-open' },
   { id: 'curriculum', path: '/curriculum', nameKo: '커리큘럼', nameEn: 'Curriculum', icon: 'fa-list-check' },
   { id: 'tools', path: '/tools', nameKo: '실습도구', nameEn: 'Tools', icon: 'fa-screwdriver-wrench' },
