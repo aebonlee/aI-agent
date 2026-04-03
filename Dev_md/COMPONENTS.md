@@ -74,10 +74,10 @@ Home, Course, Curriculum, Tools, Prompts, Cases, FAQ
 | 슬라이드 | 배경 | 주요 키워드 |
 |----------|------|-------------|
 | 1 | particles | 실무형 AI Agent 업무혁신 플랫폼 |
-| 2 | particles | 산업 맞춤형 AI Agent 교육 |
-| 3 | network | 실습 중심 워크숍 구조 |
-| 4 | orbs | 업무를 바꾸는 AI Agent 설계 |
-| 5 | geometric | 아이디어에서 실행안까지 |
+| 2 | network | 산업 맞춤형 AI Agent 교육 |
+| 3 | orbs | 실습 중심 워크숍 구조 |
+| 4 | geometric | 업무를 바꾸는 AI Agent 설계 |
+| 5 | particles | 아이디어에서 실행안까지 |
 
 ### 기능
 - **자동 전환**: 6초 간격 (`setInterval`)
