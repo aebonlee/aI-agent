@@ -43,7 +43,7 @@ export default function Navbar() {
       <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`} aria-label="메인 네비게이션">
         <div className="navbar-inner">
           <Link to="/" className="navbar-logo">
-            <span className="logo-agent">AI Agent</span>
+            <span className="logo-agent">AI Agents</span>
             <span className="logo-lab">Work Lab</span>
           </Link>
 

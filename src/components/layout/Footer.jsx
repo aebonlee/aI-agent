@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="footer-content">
           <div className="footer-brand">
             <div className="footer-logo">
-              <span className="brand-agent">AI Agent</span>
+              <span className="brand-agent">AI Agents</span>
               <span className="brand-lab">Work Lab</span>
             </div>
             <p className="footer-description">{t('footer.description')}</p>
