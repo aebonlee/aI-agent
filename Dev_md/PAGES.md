@@ -14,6 +14,7 @@
 | `/cases` | CasesPage.jsx | 산업·기관 사례 |
 | `/results` | ResultsPage.jsx | 결과물 예시 |
 | `/faq` | FaqPage.jsx | FAQ |
+| `/community` | CommunityPage.jsx | 커뮤니티 게시판 |
 | `/login` | LoginPage.jsx | 로그인 |
 | `*` | NotFound.jsx | 404 |
 
@@ -245,6 +246,40 @@
 | 온라인 교육도 가능한가요? |
 
 하단에 연락처 (이메일, 전화) 카드
+
+---
+
+## 9-1. CommunityPage (커뮤니티 게시판) — v2.4.0 신규
+
+**파일**: `src/pages/community/CommunityPage.jsx`
+
+### 단일 컴포넌트 3뷰 전환 (`useState` 기반)
+
+| 뷰 | 설명 |
+|----|------|
+| `list` | 게시글 목록 (카테고리 필터, 검색, 페이지네이션) |
+| `detail` | 게시글 상세 + 댓글 |
+| `write` | 게시글 작성/수정 |
+
+### 카테고리 (6개)
+
+| ID | 한국어 | 영어 |
+|----|--------|------|
+| all | 전체 | All |
+| free | 자유 | Free |
+| question | 질문 | Q&A |
+| share | 정보공유 | Info |
+| prompt | 프롬프트 | Prompt |
+| result | 결과물 | Result |
+
+### 기능
+- **목록**: 카테고리 pills 필터, 텍스트 검색, 글쓰기 버튼 (로그인 시만)
+- **상세**: 게시글 + 댓글 CRUD, 조회수 자동 증가, 본인 글/댓글만 수정/삭제
+- **작성**: 카테고리 선택, 제목/내용 입력, 수정 모드 지원
+- **Supabase 연동**: `agent_posts`, `agent_comments`, `agent_profiles` 테이블 JOIN 쿼리
+
+### 재사용 CSS 클래스
+`community-page`, `community-layout`, `community-toolbar`, `community-categories`, `community-category-btn`, `community-search`, `community-write-btn`, `post-list`, `post-item`, `post-vote`, `post-content`, `post-category`, `post-title`, `post-excerpt`, `post-meta`, `post-stats`, `post-detail`, `post-detail-card`, `post-detail-header`, `post-detail-body`, `post-actions`, `comments-section`, `comment-form`, `comment-list`, `comment-item`, `write-post-page`, `write-post-card`, `write-post-title-input`, `write-post-actions`
 
 ---
 

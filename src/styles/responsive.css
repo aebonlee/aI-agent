@@ -126,6 +126,14 @@
 
     /* Framework Grid */
     .framework-grid { grid-template-columns: 1fr; }
+
+    /* Community */
+    .community-layout { padding: 0 32px; }
+    .community-toolbar { flex-direction: column; align-items: stretch; gap: 12px; }
+    .community-toolbar-left, .community-toolbar-right { width: 100%; }
+    .community-categories { overflow-x: auto; flex-wrap: nowrap; }
+    .community-search { width: 100%; }
+    .post-detail, .write-post-page { padding: 0 32px 60px; }
 }
 
 /* ===== Tablet Portrait (640px - 767px) ===== */
@@ -200,6 +208,18 @@
     /* FAQ */
     .faq-question { padding: 16px 20px; font-size: 15px; }
     .faq-answer { padding: 0 20px 16px; font-size: 14px; }
+
+    /* Community */
+    .community-layout { padding: 0 24px; }
+    .community-toolbar { flex-direction: column; align-items: stretch; }
+    .community-search { width: 100%; }
+    .community-categories { overflow-x: auto; flex-wrap: nowrap; }
+    .post-item { grid-template-columns: 1fr; gap: 12px; }
+    .post-vote, .post-stats { display: none; }
+    .community-stats { grid-template-columns: repeat(2, 1fr); }
+    .post-detail-card, .write-post-card { padding: 24px; }
+    .post-detail-title { font-size: 22px; }
+    .post-detail, .write-post-page { padding: 0 24px 60px; }
 
     /* 404 */
     .not-found-code { font-size: 80px; }

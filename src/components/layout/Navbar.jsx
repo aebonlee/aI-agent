@@ -78,6 +78,11 @@ export default function Navbar() {
                 {t('nav.faq')}
               </Link>
             </li>
+            <li className="nav-item">
+              <Link to="/community" className={`nav-link ${location.pathname === '/community' ? 'active' : ''}`}>
+                {t('nav.community')}
+              </Link>
+            </li>
           </ul>
 
           <div className="navbar-actions">
@@ -148,6 +153,7 @@ export default function Navbar() {
           <li><Link to="/prompts" className="mobile-nav-link">{t('nav.prompts')}</Link></li>
           <li><Link to="/cases" className="mobile-nav-link">{t('nav.cases')}</Link></li>
           <li><Link to="/faq" className="mobile-nav-link">{t('nav.faq')}</Link></li>
+          <li><Link to="/community" className="mobile-nav-link">{t('nav.community')}</Link></li>
           <li>
             {user ? (
               <button className="mobile-nav-link" onClick={signOut} style={{ background: 'none', border: 'none', cursor: 'pointer', width: '100%', textAlign: 'left' }}>

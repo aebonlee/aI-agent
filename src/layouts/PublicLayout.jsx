@@ -13,6 +13,7 @@ const PromptsPage = lazy(() => import('../pages/prompts/PromptsPage'));
 const CasesPage = lazy(() => import('../pages/cases/CasesPage'));
 const ResultsPage = lazy(() => import('../pages/results/ResultsPage'));
 const FaqPage = lazy(() => import('../pages/faq/FaqPage'));
+const CommunityPage = lazy(() => import('../pages/community/CommunityPage'));
 const LoginPage = lazy(() => import('../pages/auth/LoginPage'));
 const NotFound = lazy(() => import('../pages/NotFound'));
 
@@ -40,6 +41,7 @@ export default function PublicLayout() {
             <Route path="/cases" element={<CasesPage />} />
             <Route path="/results" element={<ResultsPage />} />
             <Route path="/faq" element={<FaqPage />} />
+            <Route path="/community" element={<CommunityPage />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="*" element={<NotFound />} />
           </Routes>

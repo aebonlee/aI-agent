@@ -19,6 +19,7 @@ export const MENU_ITEMS = [
   { id: 'cases', path: '/cases', nameKo: '산업·기관 사례', nameEn: 'Cases', icon: 'fa-building' },
   { id: 'results', path: '/results', nameKo: '결과물 예시', nameEn: 'Results', icon: 'fa-clipboard-check' },
   { id: 'faq', path: '/faq', nameKo: 'FAQ', nameEn: 'FAQ', icon: 'fa-circle-question' },
+  { id: 'community', path: '/community', nameKo: '커뮤니티', nameEn: 'Community', icon: 'fa-users' },
 ];
 
 export const CURRICULUM_TYPES = [

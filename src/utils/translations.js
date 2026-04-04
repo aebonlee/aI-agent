@@ -10,6 +10,7 @@ const translations = {
       cases: '산업·기관 사례',
       results: '결과물 예시',
       faq: 'FAQ',
+      community: '커뮤니티',
       login: '로그인',
       logout: '로그아웃',
     },
@@ -106,6 +107,10 @@ const translations = {
       title: '결과물 예시',
       subtitle: '리서치 결과, AX 아이디어, Agent 설계, 실행안, 발표자료 등 교육 산출물 예시를 제공합니다',
     },
+    community: {
+      title: '커뮤니티',
+      subtitle: 'AI Agent 학습 경험을 공유하고, 질문하고, 함께 성장하는 공간입니다',
+    },
     faq: {
       title: 'FAQ',
       subtitle: '자주 묻는 질문과 답변을 확인하세요',
@@ -144,6 +149,7 @@ const translations = {
       cases: 'Cases',
       results: 'Results',
       faq: 'FAQ',
+      community: 'Community',
       login: 'Login',
       logout: 'Logout',
     },
@@ -239,6 +245,10 @@ const translations = {
     results: {
       title: 'Result Examples',
       subtitle: 'Examples of research results, AX ideas, Agent designs, action plans, and presentations.',
+    },
+    community: {
+      title: 'Community',
+      subtitle: 'Share your AI Agent learning experience, ask questions, and grow together',
     },
     faq: {
       title: 'FAQ',
