@@ -96,7 +96,7 @@ export default function LearningPage() {
                     <p>{ko ? '워크숍의 목적, 대상, 기대효과' : 'Workshop purpose, audience, outcomes'}</p>
                   </div>
                   <div className="framework-item">
-                    <h4><Link to="/curriculum"><i className="fa-solid fa-list-check" aria-hidden="true" /> {ko ? '커리큘럼' : 'Curriculum'}</Link></h4>
+                    <h4><Link to="/course"><i className="fa-solid fa-list-check" aria-hidden="true" /> {ko ? '커리큘럼' : 'Curriculum'}</Link></h4>
                     <p>{ko ? '8시간 기본부터 프로젝트형 확장까지' : 'From 8-hour basic to project extensions'}</p>
                   </div>
                   <div className="framework-item">
@@ -727,7 +727,7 @@ export default function LearningPage() {
                     <p>{ko ? '워크숍의 목적, 대상, 기대효과 안내' : 'Workshop purpose, audience, expected outcomes'}</p>
                   </div>
                   <div className="framework-item">
-                    <h4><Link to="/curriculum"><i className="fa-solid fa-list-check" aria-hidden="true" /> {ko ? '커리큘럼' : 'Curriculum'}</Link></h4>
+                    <h4><Link to="/course"><i className="fa-solid fa-list-check" aria-hidden="true" /> {ko ? '커리큘럼' : 'Curriculum'}</Link></h4>
                     <p>{ko ? '8시간 기본과정부터 프로젝트형 확장까지' : 'From 8-hour basic to project extensions'}</p>
                   </div>
                   <div className="framework-item">

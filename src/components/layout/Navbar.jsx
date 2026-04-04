@@ -59,11 +59,6 @@ export default function Navbar() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/curriculum" className={`nav-link ${location.pathname === '/curriculum' ? 'active' : ''}`}>
-                {t('nav.curriculum')}
-              </Link>
-            </li>
-            <li className="nav-item">
               <Link to="/tools" className={`nav-link ${location.pathname.startsWith('/tools') ? 'active' : ''}`}>
                 {t('nav.tools')}
               </Link>
@@ -149,7 +144,6 @@ export default function Navbar() {
         <ul className="mobile-nav-links">
           <li><Link to="/learning" className="mobile-nav-link">{t('nav.learning')}</Link></li>
           <li><Link to="/course" className="mobile-nav-link">{t('nav.course')}</Link></li>
-          <li><Link to="/curriculum" className="mobile-nav-link">{t('nav.curriculum')}</Link></li>
           <li><Link to="/tools" className="mobile-nav-link">{t('nav.tools')}</Link></li>
           <li><Link to="/prompts" className="mobile-nav-link">{t('nav.prompts')}</Link></li>
           <li><Link to="/cases" className="mobile-nav-link">{t('nav.cases')}</Link></li>

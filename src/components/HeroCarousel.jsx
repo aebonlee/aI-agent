@@ -37,7 +37,7 @@ export default function HeroCarousel() {
           highlight: t('hero.titleHighlight'),
           description: t('hero.description'),
           cta1: { text: t('hero.cta1'), to: '/course' },
-          cta2: { text: t('hero.cta2'), to: '/curriculum' },
+          cta2: { text: t('hero.cta2'), to: '/course' },
         };
       case 1:
         return {
@@ -46,7 +46,7 @@ export default function HeroCarousel() {
           highlight: t('hero.slide2Highlight'),
           description: t('hero.slide2Desc'),
           cta1: { text: t('hero.cta1'), to: '/course' },
-          cta2: { text: t('hero.cta2'), to: '/curriculum' },
+          cta2: { text: t('hero.cta2'), to: '/course' },
         };
       case 2:
         return {
@@ -55,7 +55,7 @@ export default function HeroCarousel() {
           highlight: t('hero.slide3Highlight'),
           description: t('hero.slide3Desc'),
           cta1: { text: t('hero.cta1'), to: '/course' },
-          cta2: { text: t('hero.cta2'), to: '/curriculum' },
+          cta2: { text: t('hero.cta2'), to: '/course' },
         };
       case 3:
         return {
@@ -108,7 +108,7 @@ export default function HeroCarousel() {
           </p>
           <div className="hero-buttons">
             <Link to={slide.cta1?.to || '/course'} className="btn btn-primary">{slide.cta1?.text}</Link>
-            <Link to={slide.cta2?.to || '/curriculum'} className="btn btn-secondary">{slide.cta2?.text}</Link>
+            <Link to={slide.cta2?.to || '/course'} className="btn btn-secondary">{slide.cta2?.text}</Link>
           </div>
         </div>
       </div>

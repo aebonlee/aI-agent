@@ -459,3 +459,13 @@ html[data-theme="dark"] .tool-card {
 html[data-theme="dark"] .tool-icon {
     background: var(--bg-light-gray);
 }
+html[data-theme="dark"] .tool-external-link {
+    background: rgba(61, 109, 181, 0.15);
+    color: #7EB8FF;
+}
+html[data-theme="dark"] .tool-external-link:hover {
+    background: rgba(61, 109, 181, 0.25);
+}
+html[data-theme="dark"] .sidebar-nav-group-label {
+    color: var(--text-light);
+}

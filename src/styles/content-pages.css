@@ -69,6 +69,20 @@
     font-weight: 600;
 }
 
+/* Sidebar Group Label */
+.sidebar-nav-group-label {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 16px 16px 4px;
+    list-style: none;
+}
+.sidebar-nav-group-label:first-child {
+    padding-top: 0;
+}
+
 /* Content Main */
 .content-main {
     min-width: 0;
@@ -478,6 +492,25 @@
 .tool-usecase i {
     margin-top: 2px;
     flex-shrink: 0;
+}
+
+/* Tool External Link */
+.tool-external-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: rgba(27, 58, 107, 0.06);
+    color: rgb(27, 58, 107);
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    margin: 12px 0 24px;
+    transition: all 0.2s;
+}
+.tool-external-link:hover {
+    background: rgba(27, 58, 107, 0.12);
 }
 
 /* ============================================

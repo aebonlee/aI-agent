@@ -6,8 +6,8 @@
 |------|----------|------|
 | `/` | Home.jsx | 메인 랜딩 페이지 |
 | `/learning` | LearningPage.jsx | 학습하기 |
-| `/course` | CoursePage.jsx | 과정소개 |
-| `/curriculum` | CurriculumPage.jsx | 커리큘럼 |
+| `/course` | CoursePage.jsx | 과정소개 및 커리큘럼 |
+| `/curriculum` | → `/course` 리다이렉트 | (v2.0.0에서 통합) |
 | `/tools` | ToolsPage.jsx | 실습도구 |
 | `/materials` | MaterialsPage.jsx | 실습자료 |
 | `/prompts` | PromptsPage.jsx | 프롬프트 템플릿 |
@@ -73,64 +73,74 @@
 
 ---
 
-## 2. CoursePage (과정소개)
+## 2. CoursePage (과정소개 및 커리큘럼) — v2.0.0 통합
 
 **파일**: `src/pages/course/CoursePage.jsx`
 
-### 사이드바 + 콘텐츠 레이아웃
+### 사이드바 + 콘텐츠 레이아웃 (10개 섹션, 그룹 라벨 분리)
 
-| 섹션 | 내용 |
-|------|------|
-| 과정 개요 | 8시간 워크숍 설명, 4개 정보 카드 (시간, 방식, 인원, 준비물) |
-| 교육 목표 | 5가지 번호 매긴 목표 |
-| 교육 대상 | 5종 대상 카드 (아이콘 포함) |
-| 기대 성과 | 4가지 컬러 보더 아이템 |
-| 왜 이 과정인가 | 차별점 설명, 정보 박스 |
-| 해결하는 문제 | 4가지 문제 영역 |
+**과정소개 그룹 (6개 섹션)**:
+| 섹션 ID | 한국어 | 영어 | 아이콘 |
+|---------|--------|------|--------|
+| `overview` | 과정 개요 | Course Overview | fa-book-open |
+| `objectives` | 교육 목적 | Objectives | fa-bullseye |
+| `targets` | 주요 대상 | Target Audience | fa-users |
+| `outcomes` | 기대효과 | Expected Outcomes | fa-chart-line |
+| `why` | 왜 이 과정인가 | Why This Course? | fa-star |
+| `problems` | 어떤 문제를 해결하는가 | What Problems? | fa-circle-question |
 
----
+**커리큘럼 그룹 (4개 섹션)**:
+| 섹션 ID | 한국어 | 영어 | 아이콘 |
+|---------|--------|------|--------|
+| `basic-8h` | 8시간 기본과정 | 8-Hour Basic | fa-clock |
+| `special-4h` | 4시간 특강형 | 4-Hour Special | fa-bolt |
+| `advanced-16h` | 16시간 심화형 | 16-Hour Advanced | fa-graduation-cap |
+| `project` | 프로젝트형 확장과정 | Project Extension | fa-diagram-project |
 
-## 3. CurriculumPage (커리큘럼)
-
-**파일**: `src/pages/curriculum/CurriculumPage.jsx`
-
-### 탭 네비게이션 (4개 과정 타입)
-
-**8시간 기본과정** (8개 세션):
-| 세션 | 시간 | 유형 | 내용 |
-|------|------|------|------|
-| 1 | 40분 | 강의 | AI Agent 이해 & 트렌드 |
-| 2 | 50분 | 실습 | 프롬프트 엔지니어링 실전 |
-| 3 | 60분 | 실습 | AI 리서치 & 업무 분해 |
-| 4 | 30분 | - | 점심 |
-| 5 | 50분 | 실습 | Agent 설계 워크숍 |
-| 6 | 60분 | 실습 | Agent 구축 체험 |
-| 7 | 50분 | 워크숍 | 실행안 구체화 |
-| 8 | 40분 | 발표 | 결과 발표 & 피드백 |
-
-**4시간 특강형**: 압축 4개 항목
-**16시간 심화형**: Day 1/Day 2 구분
-**프로젝트형**: 4페이즈 (Week 1~8)
+8시간 기본과정은 `SESSIONS_8H` 배열 (8개 세션)과 `getTypeBadgeClass` 함수로 curriculum-session-card를 렌더링.
+`/curriculum` 접속 시 `/course`로 자동 리다이렉트 (PublicLayout.jsx에서 Navigate 처리)
 
 ---
 
-## 4. ToolsPage (실습도구)
+## 4. ToolsPage (실습도구) — v2.0.0 전면 개편
 
 **파일**: `src/pages/tools/ToolsPage.jsx`
 
-### 6개 AI 도구 카드
+### 사이드바 + 콘텐츠 레이아웃 (8개 섹션)
 
-| 도구 | 색상 | 카테고리 | 용도 |
-|------|------|----------|------|
-| ChatGPT | #10A37F | 문서 작성 | GPTs로 Agent 구축 |
-| Claude | #D97706 | 분석/검토 | 논리적 문서 검토 |
-| Gemini | #4285F4 | 멀티모달 | 이미지/영상 분석 |
-| Genspark | #6366F1 | 종합 리서치 | 다중 소스 검증 |
-| Perplexity | #20B2AA | AI 검색 | 실시간 출처 리서치 |
-| Napkin AI | #EC4899 | 시각화 | 자동 다이어그램 |
+| 섹션 ID | 한국어 | 영어 | 아이콘 |
+|---------|--------|------|--------|
+| `overview` | 도구 개요 | Tools Overview | fa-grid-2 |
+| `chatgpt` | ChatGPT (GPT-4o) | ChatGPT (GPT-4o) | fa-comments |
+| `claude` | Claude (Sonnet/Opus) | Claude (Sonnet/Opus) | fa-file-lines |
+| `gemini` | Gemini | Gemini | fa-diamond |
+| `genspark` | Genspark | Genspark | fa-magnifying-glass-chart |
+| `perplexity` | Perplexity | Perplexity | fa-searchengin |
+| `napkin` | Napkin AI | Napkin AI | fa-chart-diagram |
+| `environment` | 실습 환경 안내 | Practice Environment | fa-laptop-code |
 
-### 실습 환경 안내
-- 노트북 준비, 계정 생성, 네트워크 확인, 브라우저 요구사항
+### 도구별 상세 콘텐츠 구조
+1. 도구명, 카테고리, 설명
+2. **외부 링크** (실제 URL, `.tool-external-link` 클래스)
+3. **주요 기능** 5가지 (`framework-grid`)
+4. **유용한 팁** 5가지 (`info-box tip`)
+5. **활용 사례 및 프롬프트** 2개 (`example-box`)
+
+### 도구 URL
+| 도구 | URL |
+|------|-----|
+| ChatGPT | https://chat.openai.com |
+| Claude | https://claude.ai |
+| Gemini | https://gemini.google.com |
+| Genspark | https://www.genspark.ai |
+| Perplexity | https://www.perplexity.ai |
+| Napkin AI | https://www.napkin.ai |
+
+### overview 섹션
+기존 6개 도구 카드 요약 그리드 유지 (`tools-grid` 재사용), 클릭 시 상세 섹션으로 전환
+
+### environment 섹션
+노트북, 계정, 네트워크, 브라우저 요구사항 + 도구별 바로가기 링크
 
 ---
 
@@ -173,19 +183,29 @@
 
 ---
 
-## 7. CasesPage (산업·기관 사례)
+## 7. CasesPage (산업·기관 사례) — v2.0.0 전면 개편
 
 **파일**: `src/pages/cases/CasesPage.jsx`
 
-### 사이드바 (5개 카테고리) + 14개 사례
+### 사이드바 + 콘텐츠 레이아웃 (`content-page-layout` 패턴)
+
+사이드바에 카테고리별 그룹 라벨(`.sidebar-nav-group-label`) + 개별 사례 버튼
 
 | 카테고리 | 사례 수 | 주요 사례 |
 |----------|---------|-----------|
-| 발전 공기업 | 4 | 한국중부발전 AX 혁신, 회의자료 자동화, 발전산업 리서치, 한국남부발전 가이드 |
-| 공공기관 | 2 | 업무 프로세스 재설계, 정책 자료 분석 자동화 |
-| 대학 | 3 | AI 교육 커리큘럼 개발, 대학원 연구 지원 AI Agent, 캡스톤 디자인 프로젝트 AI Agent |
-| 일반기업 | 3 | 업무 자동화 파일럿, 고객응대 매뉴얼 자동화(CS), 마케팅 콘텐츠 자동화 |
+| 발전 공기업 | 4 | 한국중부발전 AX 혁신, 회의자료 자동화, 발전산업 리서치, KOSPO 가이드 |
+| 공공기관 | 2 | 업무혁신 프로세스 재설계, 정책 문서 분석 자동화 |
+| 대학 | 3 | AI 교육 커리큘럼, 대학원 연구 지원, 캡스톤 디자인 |
+| 일반기업 | 3 | 업무 자동화 파일럿, CS 매뉴얼 자동화, 마케팅 콘텐츠 자동화 |
 | 맞춤형 AX | 2 | AX 전략 수립, Agent 라이브러리 구축 |
+
+### 사례별 상세 콘텐츠 구조 (6개 섹션, 한/영 이중 언어)
+1. **배경 및 맥락** — 조직 소개, 상황 설명
+2. **도전 과제** — 4개 핵심 문제점 (ul)
+3. **AI Agent 솔루션** — 접근 방법, 사용 도구 (p)
+4. **실행 과정** — 4~5단계 프로세스 (`curriculum-session-card` 재사용)
+5. **성과 및 결과** — 정량적 성과 (`info-box tip`)
+6. **핵심 교훈** — 3개 시사점 (`info-box`)
 
 ---
 

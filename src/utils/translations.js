@@ -3,7 +3,7 @@ const translations = {
     nav: {
       learning: '학습하기',
       course: '과정소개',
-      curriculum: '커리큘럼',
+
       tools: '실습도구',
       materials: '실습자료',
       prompts: '프롬프트 템플릿',
@@ -84,11 +84,7 @@ const translations = {
     },
     course: {
       title: '과정소개',
-      subtitle: '실무형 AI Agent 기반 업무혁신 워크숍의 목적, 대상, 기대효과를 안내합니다',
-    },
-    curriculum: {
-      title: '커리큘럼',
-      subtitle: '8시간 기본과정부터 16시간 심화형, 프로젝트형 확장과정까지 다양한 구성을 제공합니다',
+      subtitle: '과정소개 및 커리큘럼 — 워크숍의 목적, 대상, 기대효과와 교육 구성을 안내합니다',
     },
     tools: {
       title: '실습도구',
@@ -141,7 +137,7 @@ const translations = {
     nav: {
       learning: 'Learning',
       course: 'Course',
-      curriculum: 'Curriculum',
+
       tools: 'Tools',
       materials: 'Materials',
       prompts: 'Prompts',
@@ -222,11 +218,7 @@ const translations = {
     },
     course: {
       title: 'Course Overview',
-      subtitle: 'Learn about the purpose, target audience, and expected outcomes of the AI Agent Work Innovation Workshop.',
-    },
-    curriculum: {
-      title: 'Curriculum',
-      subtitle: 'From 8-hour basic courses to 16-hour advanced and project-based extensions.',
+      subtitle: 'Course Overview & Curriculum — Purpose, target audience, expected outcomes, and education structure.',
     },
     tools: {
       title: 'Practice Tools',
