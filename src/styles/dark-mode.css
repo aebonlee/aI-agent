@@ -6,17 +6,17 @@ html[data-theme="dark"] {
     --bg-white: #0F172A;
     --bg-light-gray: #1E293B;
     --bg-medium-gray: #334155;
-    --text-primary: #F1F5F9;
-    --text-secondary: #94A3B8;
-    --text-light: #64748B;
+    --text-primary: #F8FAFC;
+    --text-secondary: #CBD5E1;
+    --text-light: #94A3B8;
     --border-light: #334155;
     --border-medium: #475569;
-    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.2);
-    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.15);
-    --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.3), 0 4px 10px rgba(0, 0, 0, 0.2);
-    --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.35), 0 8px 16px rgba(0, 0, 0, 0.25);
-    --glass-bg: rgba(15, 23, 42, 0.85);
-    --glass-border: rgba(51, 65, 85, 0.5);
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.2);
+    --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.4), 0 4px 10px rgba(0, 0, 0, 0.25);
+    --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.45), 0 8px 16px rgba(0, 0, 0, 0.3);
+    --glass-bg: rgba(15, 23, 42, 0.9);
+    --glass-border: rgba(51, 65, 85, 0.6);
 }
 
 /* Navbar Dark Mode */
@@ -74,20 +74,63 @@ html[data-theme="dark"] .profile-card {
     border-color: var(--border-light);
 }
 
-/* Feature Icon Dark */
-html[data-theme="dark"] .home-feature-icon {
-    background: var(--bg-light-gray);
+/* Section Headers Dark */
+html[data-theme="dark"] .section-title {
+    color: #E2E8F0;
 }
-html[data-theme="dark"] .home-feature-card:hover .home-feature-icon {
-    background: var(--primary-blue);
+html[data-theme="dark"] .section-badge {
+    background: rgba(61, 109, 181, 0.2);
+    color: var(--primary-blue-light);
+    font-weight: 700;
+}
+html[data-theme="dark"] .section-subtitle {
+    color: var(--text-secondary);
+    font-weight: 400;
 }
 
-/* Workflow Step Dark */
+/* Feature Card Dark - improved contrast */
+html[data-theme="dark"] .home-feature-card {
+    border-left-color: var(--primary-blue-light) !important;
+}
+html[data-theme="dark"] .home-feature-icon {
+    background: rgba(61, 109, 181, 0.15);
+    color: var(--primary-blue-light);
+}
+html[data-theme="dark"] .home-feature-card:hover .home-feature-icon {
+    background: var(--primary-blue-light);
+    color: #FFFFFF;
+}
+html[data-theme="dark"] .home-feature-card h4 {
+    color: #F1F5F9;
+    font-weight: 800;
+}
+html[data-theme="dark"] .home-feature-card p {
+    color: var(--text-secondary);
+    font-weight: 400;
+}
+
+/* Workflow Section Dark */
 html[data-theme="dark"] .home-workflow-step-num {
     background: var(--bg-white);
+    color: var(--primary-blue-light);
+    font-weight: 800;
 }
 html[data-theme="dark"] .home-workflow-icon {
-    background: var(--bg-light-gray);
+    background: rgba(61, 109, 181, 0.12);
+    color: var(--primary-blue-light);
+    border-color: var(--primary-blue-light);
+}
+html[data-theme="dark"] .home-workflow-step:hover .home-workflow-icon {
+    background: var(--primary-blue-light);
+    color: #FFFFFF;
+}
+html[data-theme="dark"] .home-workflow-step h4 {
+    color: #F1F5F9;
+    font-weight: 800;
+}
+html[data-theme="dark"] .home-workflow-step p {
+    color: var(--text-secondary);
+    font-weight: 400;
 }
 
 /* Buttons Dark Mode */
@@ -279,6 +322,18 @@ html[data-theme="dark"] .login-error {
 html[data-theme="dark"] .footer {
     background: #070D1A;
 }
+html[data-theme="dark"] .footer-description {
+    color: rgba(255, 255, 255, 0.7);
+}
+html[data-theme="dark"] .footer-link-list li a {
+    color: rgba(255, 255, 255, 0.7);
+}
+html[data-theme="dark"] .footer-contact p {
+    color: rgba(255, 255, 255, 0.7);
+}
+html[data-theme="dark"] .footer-email a {
+    color: rgba(255, 255, 255, 0.7);
+}
 
 /* Badge Dark */
 html[data-theme="dark"] .badge {
@@ -440,15 +495,21 @@ html[data-theme="dark"] .case-result-item {
 /* FAQ Dark */
 html[data-theme="dark"] .faq-item {
     border-color: var(--border-light);
+    background: var(--bg-white);
 }
 html[data-theme="dark"] .faq-question {
-    color: var(--text-primary);
+    color: #F1F5F9;
+    font-weight: 700;
 }
 html[data-theme="dark"] .faq-question:hover {
     color: var(--primary-blue-light);
 }
+html[data-theme="dark"] .faq-question-icon {
+    color: var(--primary-blue-light);
+}
 html[data-theme="dark"] .faq-answer {
     color: var(--text-secondary);
+    font-weight: 400;
 }
 
 /* Tool Card Dark */
@@ -488,6 +549,49 @@ html[data-theme="dark"] .copy-btn.copied {
     color: #2AAF7A;
     background: rgba(42, 175, 122, 0.12);
     border-color: #2AAF7A;
+}
+
+/* Home Tool Card Dark */
+html[data-theme="dark"] .home-tool-card {
+    background: var(--bg-white);
+    border-color: var(--border-light);
+}
+html[data-theme="dark"] .home-tool-card:hover {
+    border-color: var(--primary-blue-light);
+}
+html[data-theme="dark"] .home-tool-number {
+    color: var(--bg-medium-gray);
+}
+html[data-theme="dark"] .home-tool-icon {
+    background: rgba(61, 109, 181, 0.15);
+    color: var(--primary-blue-light);
+}
+html[data-theme="dark"] .home-tool-card h3 {
+    color: #F1F5F9;
+    font-weight: 700;
+}
+
+/* Page Header Dark */
+html[data-theme="dark"] .page-header {
+    background: linear-gradient(135deg, #0A1E3A 0%, #162D50 100%);
+}
+
+/* Dark Mode Font Readability Boost */
+html[data-theme="dark"] body {
+    -webkit-font-smoothing: auto;
+    letter-spacing: 0.01em;
+}
+html[data-theme="dark"] h1,
+html[data-theme="dark"] h2,
+html[data-theme="dark"] h3,
+html[data-theme="dark"] h4 {
+    letter-spacing: 0;
+}
+
+/* Loading Spinner Dark */
+html[data-theme="dark"] .loading-spinner {
+    border-color: var(--border-light);
+    border-top-color: var(--primary-blue-light);
 }
 
 /* Toast Dark */
