@@ -1,5 +1,5 @@
 export const SITE_CONFIG = {
-  name: 'AI Agent Work Lab',
+  name: 'AI Agents Work Lab',
   nameKo: '실무형 AI Agent 업무혁신 플랫폼',
   description: '생성형 AI를 넘어, 실무에 적용하는 AI Agent 학습 플랫폼. 리서치, 문서화, 자동화, 아이디어 구체화를 위한 실무형 AI Agent 교육',
   url: 'https://ai-agent.dreamitbiz.com',

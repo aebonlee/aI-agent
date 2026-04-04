@@ -23,7 +23,7 @@ export default function LoginPage() {
           <div className="login-logo">
             <i className="fa-solid fa-robot" aria-hidden="true" style={{ fontSize: '32px', color: 'var(--primary-blue)' }} />
           </div>
-          <h1 id="login-heading">AI Agent Work Lab</h1>
+          <h1 id="login-heading">AI Agents Work Lab</h1>
           <p>{t('login.subtitle')}</p>
         </div>
 

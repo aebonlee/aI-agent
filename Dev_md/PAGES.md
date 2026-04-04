@@ -280,7 +280,7 @@
 
 ### 구성
 - 로봇 아이콘 로고
-- "AI Agent Work Lab" 타이틀
+- "AI Agents Work Lab" 타이틀
 - Google 로그인 버튼 (흰색, Google SVG 로고)
 - Kakao 로그인 버튼 (노란색, Kakao SVG 로고)
 - 개인정보 안내 텍스트

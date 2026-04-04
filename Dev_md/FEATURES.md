@@ -141,7 +141,7 @@
 - 1200x630px PNG
 - sharp를 통한 SVG→PNG 변환
 - 다크 블루 그라디언트 배경
-- "AI Agent Work Lab" 타이틀
+- "AI Agents Work Lab" 타이틀
 - 기능 칩 (프롬프트, 리서치, 자동화, Agent 설계)
 - `npm run generate:og`로 생성
 

@@ -1,8 +1,8 @@
-# AI Agent Work Lab - 종합 개발 문서
+# AI Agents Work Lab - 종합 개발 문서
 
 ## 프로젝트 개요
 
-**AI Agent Work Lab**은 공공기관, 발전사, 기업, 대학 등에서 활용 가능한 **실무형 AI Agent 교육 플랫폼**입니다.
+**AI Agents Work Lab**은 공공기관, 발전사, 기업, 대학 등에서 활용 가능한 **실무형 AI Agent 교육 플랫폼**입니다.
 
 - **URL**: https://ai-agent.dreamitbiz.com
 - **기술 스택**: React 19 + Vite 8 + Supabase + CSS (vanilla)

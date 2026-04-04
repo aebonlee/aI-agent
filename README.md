@@ -1,4 +1,4 @@
-# AI Agent Work Lab
+# AI Agents Work Lab
 
 공공기관, 발전사, 기업, 대학 등에서 활용 가능한 **실무형 AI Agent 교육 플랫폼**
 

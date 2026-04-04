@@ -58,7 +58,7 @@ Home, Course, Curriculum, Tools, Prompts, Cases, FAQ
 
 ### 구성
 - 4열 그리드: 브랜드 | 빠른 링크 | 연락처 | 패밀리 사이트
-- **브랜드**: "AI Agent Work Lab" + 설명 텍스트
+- **브랜드**: "AI Agents Work Lab" + 설명 텍스트
 - **빠른 링크** (7개): Course, Curriculum, Materials, Prompts, Cases, Results, FAQ
 - **연락처**: 이메일(aebon@dreamitbiz.com), 전화, 평일 영업시간
 - **패밀리 사이트**: DreamIT Biz, Teaching AI, Planning Academy

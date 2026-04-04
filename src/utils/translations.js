@@ -117,7 +117,7 @@ const translations = {
     },
     login: {
       title: '로그인',
-      subtitle: 'AI Agent Work Lab에 로그인하세요',
+      subtitle: 'AI Agents Work Lab에 로그인하세요',
       googleBtn: 'Google로 로그인',
       kakaoBtn: '카카오로 로그인',
       notice: '로그인 시 서비스 이용약관 및 개인정보 처리방침에 동의하는 것으로 간주됩니다.',
@@ -154,7 +154,7 @@ const translations = {
       businessHours: '평일 09:00 - 18:00',
       familySite: '패밀리 사이트',
       copyright: '© 2026 DreamIT Biz. All rights reserved.',
-      poweredBy: 'Powered by AI Agent Work Lab Platform',
+      poweredBy: 'Powered by AI Agents Work Lab Platform',
     },
   },
   en: {
@@ -275,7 +275,7 @@ const translations = {
     },
     login: {
       title: 'Login',
-      subtitle: 'Sign in to AI Agent Work Lab',
+      subtitle: 'Sign in to AI Agents Work Lab',
       googleBtn: 'Sign in with Google',
       kakaoBtn: 'Sign in with Kakao',
       notice: 'By logging in, you agree to our Terms of Service and Privacy Policy.',
@@ -312,7 +312,7 @@ const translations = {
       businessHours: 'Weekdays 09:00 - 18:00',
       familySite: 'Family Sites',
       copyright: '© 2026 DreamIT Biz. All rights reserved.',
-      poweredBy: 'Powered by AI Agent Work Lab Platform',
+      poweredBy: 'Powered by AI Agents Work Lab Platform',
     },
   },
 };

@@ -1,4 +1,4 @@
-# AI Agent Work Lab - 개발 문서
+# AI Agents Work Lab - 개발 문서
 
 > 실무형 AI Agent 업무혁신 플랫폼 개발 전체 문서
 
@@ -6,7 +6,7 @@
 
 | 항목 | 내용 |
 |------|------|
-| **프로젝트명** | AI Agent Work Lab |
+| **프로젝트명** | AI Agents Work Lab |
 | **설명** | 실무형 AI Agent 업무혁신 교육 플랫폼 |
 | **라이브 URL** | https://ai-agent.dreamitbiz.com |
 | **저장소** | https://github.com/aebonlee/aI-agent |

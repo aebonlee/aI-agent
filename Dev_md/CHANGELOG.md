@@ -2,7 +2,7 @@
 
 ## [1.0.0] - 2026-04-02
 
-### 초기 릴리스 - AI Agent Work Lab 플랫폼 구축
+### 초기 릴리스 - AI Agents Work Lab 플랫폼 구축
 
 #### 프로젝트 초기화
 - Vite 8 + React 19 프로젝트 생성

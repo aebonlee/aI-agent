@@ -1,5 +1,5 @@
 -- =============================================
--- AI Agent Work Lab - Supabase Migration Script
+-- AI Agents Work Lab - Supabase Migration Script
 -- 접두사: agent_
 -- 실행일: 2026-04-04
 -- =============================================
