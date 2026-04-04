@@ -121,7 +121,7 @@ export default function FaqPage() {
           <div style={{ display: 'flex', justifyContent: 'center', gap: '24px', marginTop: '20px', flexWrap: 'wrap' }}>
             <div className="framework-item" style={{ borderLeft: '3px solid #1B3A6B', textAlign: 'left', flex: '1', minWidth: '200px', maxWidth: '300px' }}>
               <h4><i className="fa-solid fa-envelope" aria-hidden="true" /> {ko ? '이메일' : 'Email'}</h4>
-              <p>contact@dreamitbiz.co.kr</p>
+              <p>aebon@dreamitbiz.com</p>
             </div>
             <div className="framework-item" style={{ borderLeft: '3px solid #3D6DB5', textAlign: 'left', flex: '1', minWidth: '200px', maxWidth: '300px' }}>
               <h4><i className="fa-solid fa-phone" aria-hidden="true" /> {ko ? '전화' : 'Phone'}</h4>

@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback } from 'react';
 import { useLanguage } from '../../contexts/LanguageContext';
 import { useAuth } from '../../contexts/AuthContext';
 import { supabase, TABLES } from '../../lib/supabase';
+import SEOHead from '../../components/SEOHead';
 
 const CATEGORIES = [
   { id: 'all', ko: '전체', en: 'All' },
@@ -202,6 +203,7 @@ export default function CommunityPage() {
   if (view === 'list') {
     return (
       <div className="community-page">
+        <SEOHead title={t('community.title')} description={t('community.subtitle')} path="/community" />
         <div className="page-header">
           <div className="container">
             <h1>{t('community.title')}</h1>
@@ -305,6 +307,7 @@ export default function CommunityPage() {
   if (view === 'detail') {
     return (
       <div className="community-page">
+        <SEOHead title={t('community.title')} description={t('community.subtitle')} path="/community" />
         <div className="page-header">
           <div className="container">
             <h1>{t('community.title')}</h1>
@@ -440,6 +443,7 @@ export default function CommunityPage() {
   // ===== WRITE / EDIT VIEW =====
   return (
     <div className="community-page">
+      <SEOHead title={t('community.title')} description={t('community.subtitle')} path="/community" />
       <div className="page-header">
         <div className="container">
           <h1>{editingPostId ? (isKo ? '게시글 수정' : 'Edit Post') : (isKo ? '글쓰기' : 'Write Post')}</h1>

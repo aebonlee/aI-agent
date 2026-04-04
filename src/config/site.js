@@ -5,7 +5,7 @@ export const SITE_CONFIG = {
   url: 'https://ai-agent.dreamitbiz.com',
   base: '/',
   author: 'DreamIT Biz',
-  email: 'contact@dreamitbiz.com',
+  email: 'aebon@dreamitbiz.com',
   github: 'https://github.com/aebonlee/aI-agent',
 };
 
