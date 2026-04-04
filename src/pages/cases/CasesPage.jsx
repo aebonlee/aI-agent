@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useLanguage } from '../../contexts/LanguageContext';
 import SEOHead from '../../components/SEOHead';
+import SidebarNav from '../../components/SidebarNav';
 
 const CATEGORIES = [
   { id: 'power', titleKo: '발전 공기업', titleEn: 'Power Companies', icon: 'fa-bolt', count: 4 },
@@ -426,6 +427,19 @@ const CASES = [
   },
 ];
 
+const SIDEBAR_GROUPS = CATEGORIES.map(cat => ({
+  id: `group-${cat.id}`,
+  labelKo: cat.titleKo,
+  labelEn: cat.titleEn,
+  icon: cat.icon,
+  items: CASES.filter(c => c.category === cat.id).map(c => ({
+    id: c.id,
+    titleKo: c.titleKo,
+    titleEn: c.titleEn,
+    icon: c.icon,
+  })),
+}));
+
 export default function CasesPage() {
   const { language, t } = useLanguage();
   const [activeCase, setActiveCase] = useState(CASES[0].id);
@@ -446,31 +460,13 @@ export default function CasesPage() {
 
       <div className="container">
         <div className="content-page-layout">
-          <aside className="content-sidebar">
-            <h3>{ko ? '사례 목록' : 'Case List'}</h3>
-            <ul className="sidebar-nav">
-              {CATEGORIES.map(cat => {
-                const catCases = CASES.filter(c => c.category === cat.id);
-                return [
-                  <li key={`group-${cat.id}`} className="sidebar-nav-group-label">
-                    <i className={`fa-solid ${cat.icon}`} aria-hidden="true" style={{ marginRight: '6px' }} />
-                    {ko ? cat.titleKo : cat.titleEn} ({catCases.length})
-                  </li>,
-                  ...catCases.map(c => (
-                    <li key={c.id} className="sidebar-nav-item">
-                      <button
-                        className={`sidebar-nav-btn ${activeCase === c.id ? 'active' : ''}`}
-                        onClick={() => setActiveCase(c.id)}
-                      >
-                        <i className={`fa-solid ${c.icon}`} aria-hidden="true" />
-                        {ko ? c.titleKo : c.titleEn}
-                      </button>
-                    </li>
-                  )),
-                ];
-              })}
-            </ul>
-          </aside>
+          <SidebarNav
+            groups={SIDEBAR_GROUPS}
+            activeId={activeCase}
+            onSelect={setActiveCase}
+            headingKo="사례 목록"
+            headingEn="Case List"
+          />
 
           <div className="content-main">
             {currentCase && (

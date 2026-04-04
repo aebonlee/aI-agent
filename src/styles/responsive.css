@@ -91,6 +91,23 @@
     }
     .sidebar-nav-btn { padding: 8px 16px; }
 
+    /* Tablet/mobile: hide group toggle, flat layout */
+    .sidebar-nav-group-toggle { display: none; }
+    .sidebar-nav-group-items {
+        grid-template-rows: 1fr !important;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 4px;
+    }
+    .sidebar-nav-group-items-inner {
+        display: contents;
+    }
+    .sidebar-nav-group-items .sidebar-nav-btn {
+        padding-left: 16px;
+        font-size: 14px;
+    }
+
     /* Footer */
     .footer-content { grid-template-columns: 1fr 1fr; gap: 32px; }
     .footer-brand { grid-column: 1 / -1; }

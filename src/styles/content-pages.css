@@ -69,18 +69,78 @@
     font-weight: 600;
 }
 
-/* Sidebar Group Label */
-.sidebar-nav-group-label {
-    font-size: 11px;
+/* Sidebar Accordion Group */
+.sidebar-nav-group { }
+
+.sidebar-nav-group-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    width: 100%;
+    font-size: 12px;
     font-weight: 700;
     color: var(--text-light);
     text-transform: uppercase;
-    letter-spacing: 0.08em;
-    padding: 16px 16px 4px;
-    list-style: none;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    background: none;
+    border: none;
+    border-radius: var(--radius-sm);
+    font-family: inherit;
+    transition: var(--transition-base);
 }
-.sidebar-nav-group-label:first-child {
-    padding-top: 0;
+.sidebar-nav-group-toggle:hover {
+    color: var(--primary-blue);
+    background: rgba(27, 58, 107, 0.04);
+}
+
+.sidebar-nav-group-text {
+    flex: 1;
+    text-align: left;
+}
+
+.sidebar-nav-group-count {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-light);
+    background: var(--bg-light-gray);
+    padding: 1px 7px;
+    border-radius: var(--radius-full);
+}
+
+.sidebar-nav-chevron {
+    font-size: 10px;
+    color: var(--text-light);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    flex-shrink: 0;
+}
+.sidebar-nav-group-toggle.open .sidebar-nav-chevron {
+    transform: rotate(180deg);
+}
+
+/* Collapse Animation (grid-template-rows) */
+.sidebar-nav-group-items {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+}
+.sidebar-nav-group-items.expanded {
+    grid-template-rows: 1fr;
+}
+.sidebar-nav-group-items-inner {
+    min-height: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+/* Nested items indent */
+.sidebar-nav-group-items .sidebar-nav-btn {
+    padding-left: 36px;
+    font-size: 13px;
 }
 
 /* Content Main */

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useLanguage } from '../../contexts/LanguageContext';
 import SEOHead from '../../components/SEOHead';
+import SidebarNav from '../../components/SidebarNav';
 
 const TOOLS = [
   {
@@ -293,10 +294,35 @@ const TOOLS = [
   },
 ];
 
-const SECTIONS = [
-  { id: 'overview', titleKo: '도구 개요', titleEn: 'Tools Overview', icon: 'fa-grid-2' },
-  ...TOOLS.map(t => ({ id: t.id, titleKo: t.nameKo, titleEn: t.nameEn, icon: t.icon })),
-  { id: 'environment', titleKo: '실습 환경 안내', titleEn: 'Practice Environment', icon: 'fa-laptop-code' },
+const SIDEBAR_GROUPS = [
+  {
+    id: 'group-overview', labelKo: '개요', labelEn: 'Overview', icon: 'fa-grid-2',
+    items: [
+      { id: 'overview', titleKo: '도구 개요', titleEn: 'Tools Overview', icon: 'fa-grid-2' },
+    ],
+  },
+  {
+    id: 'group-conversational', labelKo: '대화형 AI', labelEn: 'Conversational AI', icon: 'fa-comments',
+    items: [
+      { id: 'chatgpt', titleKo: 'ChatGPT (GPT-4o)', titleEn: 'ChatGPT (GPT-4o)', icon: 'fa-comments' },
+      { id: 'claude', titleKo: 'Claude (Sonnet/Opus)', titleEn: 'Claude (Sonnet/Opus)', icon: 'fa-file-lines' },
+    ],
+  },
+  {
+    id: 'group-research', labelKo: '리서치 도구', labelEn: 'Research Tools', icon: 'fa-magnifying-glass-chart',
+    items: [
+      { id: 'gemini', titleKo: 'Gemini', titleEn: 'Gemini', icon: 'fa-diamond' },
+      { id: 'genspark', titleKo: 'Genspark', titleEn: 'Genspark', icon: 'fa-magnifying-glass-chart' },
+      { id: 'perplexity', titleKo: 'Perplexity', titleEn: 'Perplexity', icon: 'fa-searchengin' },
+    ],
+  },
+  {
+    id: 'group-visual', labelKo: '시각화 및 환경', labelEn: 'Visual & Setup', icon: 'fa-chart-diagram',
+    items: [
+      { id: 'napkin', titleKo: 'Napkin AI', titleEn: 'Napkin AI', icon: 'fa-chart-diagram' },
+      { id: 'environment', titleKo: '실습 환경 안내', titleEn: 'Practice Environment', icon: 'fa-laptop-code' },
+    ],
+  },
 ];
 
 export default function ToolsPage() {
@@ -319,21 +345,13 @@ export default function ToolsPage() {
 
       <div className="container">
         <div className="content-page-layout">
-          <aside className="content-sidebar">
-            <h3>{ko ? '목차' : 'Contents'}</h3>
-            <ul className="sidebar-nav">
-              {SECTIONS.map(s => (
-                <li key={s.id} className="sidebar-nav-item">
-                  <button
-                    className={`sidebar-nav-btn ${activeSection === s.id ? 'active' : ''}`}
-                    onClick={() => setActiveSection(s.id)}
-                  >
-                    <i className={`fa-solid ${s.icon}`} aria-hidden="true" /> {ko ? s.titleKo : s.titleEn}
-                  </button>
-                </li>
-              ))}
-            </ul>
-          </aside>
+          <SidebarNav
+            groups={SIDEBAR_GROUPS}
+            activeId={activeSection}
+            onSelect={setActiveSection}
+            headingKo="목차"
+            headingEn="Contents"
+          />
 
           <div className="content-main">
             {activeSection === 'overview' && (

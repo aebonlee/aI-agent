@@ -1,20 +1,29 @@
 import { useState } from 'react';
 import { useLanguage } from '../../contexts/LanguageContext';
 import SEOHead from '../../components/SEOHead';
+import SidebarNav from '../../components/SidebarNav';
 
-const SECTIONS = [
-  { id: '_group_course', groupKo: '과정소개', groupEn: 'Course' },
-  { id: 'overview', titleKo: '과정 개요', titleEn: 'Course Overview', icon: 'fa-book-open' },
-  { id: 'objectives', titleKo: '교육 목적', titleEn: 'Objectives', icon: 'fa-bullseye' },
-  { id: 'targets', titleKo: '주요 대상', titleEn: 'Target Audience', icon: 'fa-users' },
-  { id: 'outcomes', titleKo: '기대효과', titleEn: 'Expected Outcomes', icon: 'fa-chart-line' },
-  { id: 'why', titleKo: '왜 이 과정인가', titleEn: 'Why This Course?', icon: 'fa-star' },
-  { id: 'problems', titleKo: '어떤 문제를 해결하는가', titleEn: 'What Problems?', icon: 'fa-circle-question' },
-  { id: '_group_curriculum', groupKo: '커리큘럼', groupEn: 'Curriculum' },
-  { id: 'basic-8h', titleKo: '8시간 기본과정', titleEn: '8-Hour Basic', icon: 'fa-clock' },
-  { id: 'special-4h', titleKo: '4시간 특강형', titleEn: '4-Hour Special', icon: 'fa-bolt' },
-  { id: 'advanced-16h', titleKo: '16시간 심화형', titleEn: '16-Hour Advanced', icon: 'fa-graduation-cap' },
-  { id: 'project', titleKo: '프로젝트형 확장과정', titleEn: 'Project Extension', icon: 'fa-diagram-project' },
+const SIDEBAR_GROUPS = [
+  {
+    id: 'group-course', labelKo: '과정소개', labelEn: 'Course', icon: 'fa-book-open',
+    items: [
+      { id: 'overview', titleKo: '과정 개요', titleEn: 'Course Overview', icon: 'fa-book-open' },
+      { id: 'objectives', titleKo: '교육 목적', titleEn: 'Objectives', icon: 'fa-bullseye' },
+      { id: 'targets', titleKo: '주요 대상', titleEn: 'Target Audience', icon: 'fa-users' },
+      { id: 'outcomes', titleKo: '기대효과', titleEn: 'Expected Outcomes', icon: 'fa-chart-line' },
+      { id: 'why', titleKo: '왜 이 과정인가', titleEn: 'Why This Course?', icon: 'fa-star' },
+      { id: 'problems', titleKo: '어떤 문제를 해결하는가', titleEn: 'What Problems?', icon: 'fa-circle-question' },
+    ],
+  },
+  {
+    id: 'group-curriculum', labelKo: '커리큘럼', labelEn: 'Curriculum', icon: 'fa-graduation-cap',
+    items: [
+      { id: 'basic-8h', titleKo: '8시간 기본과정', titleEn: '8-Hour Basic', icon: 'fa-clock' },
+      { id: 'special-4h', titleKo: '4시간 특강형', titleEn: '4-Hour Special', icon: 'fa-bolt' },
+      { id: 'advanced-16h', titleKo: '16시간 심화형', titleEn: '16-Hour Advanced', icon: 'fa-graduation-cap' },
+      { id: 'project', titleKo: '프로젝트형 확장과정', titleEn: 'Project Extension', icon: 'fa-diagram-project' },
+    ],
+  },
 ];
 
 const SESSIONS_8H = [
@@ -133,30 +142,13 @@ export default function CoursePage() {
 
       <div className="container">
         <div className="content-page-layout">
-          <aside className="content-sidebar">
-            <h3>{ko ? '목차' : 'Contents'}</h3>
-            <ul className="sidebar-nav">
-              {SECTIONS.map(s => {
-                if (s.id.startsWith('_group_')) {
-                  return (
-                    <li key={s.id} className="sidebar-nav-group-label">
-                      {ko ? s.groupKo : s.groupEn}
-                    </li>
-                  );
-                }
-                return (
-                  <li key={s.id} className="sidebar-nav-item">
-                    <button
-                      className={`sidebar-nav-btn ${activeSection === s.id ? 'active' : ''}`}
-                      onClick={() => setActiveSection(s.id)}
-                    >
-                      <i className={`fa-solid ${s.icon}`} aria-hidden="true" /> {ko ? s.titleKo : s.titleEn}
-                    </button>
-                  </li>
-                );
-              })}
-            </ul>
-          </aside>
+          <SidebarNav
+            groups={SIDEBAR_GROUPS}
+            activeId={activeSection}
+            onSelect={setActiveSection}
+            headingKo="목차"
+            headingEn="Contents"
+          />
 
           <div className="content-main">
             {activeSection === 'overview' && (

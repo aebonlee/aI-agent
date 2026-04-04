@@ -221,6 +221,15 @@
 | 클래스 | 용도 |
 |--------|------|
 | `.sidebar-nav-btn` | 콘텐츠 사이드바 버튼 (hover/active) |
+| `.sidebar-nav-group` | 아코디언 그룹 래퍼 |
+| `.sidebar-nav-group-toggle` | 그룹 토글 버튼 (접기/펼치기) |
+| `.sidebar-nav-group-toggle.open` | 열린 상태 (셰브론 회전) |
+| `.sidebar-nav-group-text` | 그룹 라벨 텍스트 |
+| `.sidebar-nav-group-count` | 아이템 개수 배지 (pill) |
+| `.sidebar-nav-chevron` | 셰브론 화살표 아이콘 |
+| `.sidebar-nav-group-items` | 접힘 컨테이너 (grid-template-rows: 0fr) |
+| `.sidebar-nav-group-items.expanded` | 펼침 상태 (grid-template-rows: 1fr) |
+| `.sidebar-nav-group-items-inner` | 내부 래퍼 (min-height: 0) |
 | `.cases-menu-item` | 사례 사이드바 메뉴 아이템 |
 
 ### 버튼

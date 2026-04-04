@@ -36,6 +36,7 @@ aI-agent/
 │   │   │   └── Footer.jsx           # 푸터
 │   │   ├── HeroCarousel.jsx         # 히어로 캐러셀 (5슬라이드)
 │   │   ├── HeroBackground.jsx       # 히어로 배경 애니메이션 (4종)
+│   │   ├── SidebarNav.jsx           # 아코디언 사이드바 (4개 콘텐츠 페이지 공통)
 │   │   └── SEOHead.jsx              # 동적 SEO 메타 태그
 │   │
 │   ├── config/
@@ -111,7 +112,7 @@ aI-agent/
 | 분류 | 파일 수 |
 |------|---------|
 | 페이지 컴포넌트 | 12개 (.jsx) |
-| 공통 컴포넌트 | 5개 (.jsx) |
+| 공통 컴포넌트 | 6개 (.jsx) |
 | 레이아웃 | 1개 (.jsx) |
 | 컨텍스트 | 3개 (.jsx) |
 | 설정/유틸 | 3개 (.js) |
@@ -120,7 +121,7 @@ aI-agent/
 | 정적 자산 | 4개 |
 | 스크립트 | 1개 |
 | 문서 | 11개 |
-| **총합** | **59개** |
+| **총합** | **60개** |
 
 ## 빌드 출력 (dist/)
 
@@ -132,7 +133,7 @@ dist/
 ├── icons.svg                        # 아이콘
 ├── og-image.png                     # OG 이미지
 └── assets/
-    ├── index-*.css                  # 83.16 KB (gzip 13.93 KB)
+    ├── index-*.css                  # 77.32 KB (gzip 13.14 KB)
     ├── vendor-*.js                  # 230.41 KB (gzip 73.58 KB)
     ├── index-*.js                   # 210.01 KB (gzip 56.77 KB)
     ├── rolldown-runtime-*.js        # 0.55 KB
@@ -148,5 +149,6 @@ dist/
     ├── FaqPage-*.js                 # 9.27 KB
     ├── LoginPage-*.js               # 2.46 KB
     ├── NotFound-*.js                # 1.10 KB
+    ├── SidebarNav-*.js              # 1.62 KB
     └── SEOHead-*.js                 # 1.64 KB
 ```

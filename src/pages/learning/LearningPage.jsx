@@ -2,21 +2,37 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../../contexts/LanguageContext';
 import SEOHead from '../../components/SEOHead';
+import SidebarNav from '../../components/SidebarNav';
 
-const SECTIONS = [
-  { id: 'overview', titleKo: '학습 안내', titleEn: 'Learning Guide', icon: 'fa-compass' },
-  { id: 'ai-basics', titleKo: '생성형 AI의 이해', titleEn: 'Understanding Generative AI', icon: 'fa-microchip' },
-  { id: 'ai-agent', titleKo: 'AI Agent 개론', titleEn: 'AI Agent Introduction', icon: 'fa-robot' },
-  { id: 'agent-types', titleKo: 'AI Agent 유형과 구조', titleEn: 'Agent Types & Architecture', icon: 'fa-diagram-project' },
-  { id: 'prompt-theory', titleKo: '프롬프트 엔지니어링', titleEn: 'Prompt Engineering Theory', icon: 'fa-pencil-ruler' },
-  { id: 'task-decomposition', titleKo: '업무 분해 방법론', titleEn: 'Task Decomposition', icon: 'fa-sitemap' },
-  { id: 'advanced-concepts', titleKo: '심화 개념', titleEn: 'Advanced Concepts', icon: 'fa-layer-group' },
-  { id: 'learning-path', titleKo: '학습 로드맵', titleEn: 'Learning Roadmap', icon: 'fa-route' },
+const SIDEBAR_GROUPS = [
+  {
+    id: 'group-foundation', labelKo: '기초 이론', labelEn: 'Foundation', icon: 'fa-seedling',
+    items: [
+      { id: 'overview', titleKo: '학습 안내', titleEn: 'Learning Guide', icon: 'fa-compass' },
+      { id: 'ai-basics', titleKo: '생성형 AI의 이해', titleEn: 'Understanding Generative AI', icon: 'fa-microchip' },
+      { id: 'ai-agent', titleKo: 'AI Agent 개론', titleEn: 'AI Agent Introduction', icon: 'fa-robot' },
+    ],
+  },
+  {
+    id: 'group-core', labelKo: '핵심 역량', labelEn: 'Core Skills', icon: 'fa-pencil-ruler',
+    items: [
+      { id: 'agent-types', titleKo: 'AI Agent 유형과 구조', titleEn: 'Agent Types & Architecture', icon: 'fa-diagram-project' },
+      { id: 'prompt-theory', titleKo: '프롬프트 엔지니어링', titleEn: 'Prompt Engineering Theory', icon: 'fa-pencil-ruler' },
+      { id: 'task-decomposition', titleKo: '업무 분해 방법론', titleEn: 'Task Decomposition', icon: 'fa-sitemap' },
+    ],
+  },
+  {
+    id: 'group-advanced', labelKo: '심화 학습', labelEn: 'Advanced', icon: 'fa-layer-group',
+    items: [
+      { id: 'advanced-concepts', titleKo: '심화 개념', titleEn: 'Advanced Concepts', icon: 'fa-layer-group' },
+      { id: 'learning-path', titleKo: '학습 로드맵', titleEn: 'Learning Roadmap', icon: 'fa-route' },
+    ],
+  },
 ];
 
 export default function LearningPage() {
   const { language, t } = useLanguage();
-  const [activeSection, setActiveSection] = useState(SECTIONS[0].id);
+  const [activeSection, setActiveSection] = useState('overview');
   const ko = language === 'ko';
 
   return (
@@ -32,21 +48,13 @@ export default function LearningPage() {
 
       <div className="container">
         <div className="content-page-layout">
-          <aside className="content-sidebar">
-            <h3>{ko ? '목차' : 'Contents'}</h3>
-            <ul className="sidebar-nav">
-              {SECTIONS.map(s => (
-                <li key={s.id} className="sidebar-nav-item">
-                  <button
-                    className={`sidebar-nav-btn ${activeSection === s.id ? 'active' : ''}`}
-                    onClick={() => setActiveSection(s.id)}
-                  >
-                    <i className={`fa-solid ${s.icon}`} aria-hidden="true" /> {ko ? s.titleKo : s.titleEn}
-                  </button>
-                </li>
-              ))}
-            </ul>
-          </aside>
+          <SidebarNav
+            groups={SIDEBAR_GROUPS}
+            activeId={activeSection}
+            onSelect={setActiveSection}
+            headingKo="목차"
+            headingEn="Contents"
+          />
 
           <div className="content-main">
 

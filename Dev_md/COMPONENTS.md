@@ -9,6 +9,7 @@ src/components/
 │   └── Footer.jsx          # 푸터
 ├── HeroCarousel.jsx        # 히어로 캐러셀
 ├── HeroBackground.jsx      # 히어로 배경 애니메이션
+├── SidebarNav.jsx          # 아코디언 사이드바 (4개 콘텐츠 페이지 공통)
 └── SEOHead.jsx             # 동적 SEO 메타 태그
 ```
 
@@ -137,6 +138,56 @@ Home, Course, Curriculum, Tools, Prompts, Cases, FAQ
 - 메타 태그가 없으면 생성, 있으면 업데이트
 - `og:locale`은 언어에 따라 `ko_KR` / `en_US` 전환
 - 렌더링은 `null` (UI 없음)
+
+---
+
+## SidebarNav.jsx
+
+**경로**: `src/components/SidebarNav.jsx`
+
+### 기능
+- 4개 콘텐츠 페이지(CoursePage, CasesPage, ToolsPage, LearningPage)에서 공통 사용하는 아코디언 사이드바
+- 그룹별 접기/펼치기 (다중 열기 가능)
+- activeId 변경 시 해당 그룹 자동 펼침
+- grid-template-rows 0fr→1fr CSS-only 애니메이션
+- 태블릿/모바일에서 그룹 토글 숨기고 플랫 레이아웃 자동 전환
+
+### Props
+
+| Prop | 타입 | 설명 |
+|------|------|------|
+| `groups` | array | `[{ id, labelKo, labelEn, icon, items: [{ id, titleKo, titleEn, icon }] }]` |
+| `activeId` | string | 현재 선택된 섹션 ID |
+| `onSelect` | function | `(id) => void` 콜백 |
+| `headingKo` | string | 한국어 제목 (예: '목차') |
+| `headingEn` | string | 영어 제목 (예: 'Contents') |
+
+### 상태
+| 상태 | 타입 | 설명 |
+|------|------|------|
+| `openGroups` | Set | 열린 그룹 ID 집합 (다중 열기) |
+
+### 사용 페이지별 그룹 구성
+
+| 페이지 | 그룹 수 | 총 아이템 |
+|--------|---------|-----------|
+| CoursePage | 2 (과정소개, 커리큘럼) | 10 |
+| CasesPage | 5 (발전, 공공, 대학, 기업, AX) | 14 |
+| ToolsPage | 4 (개요, 대화형AI, 리서치, 시각화) | 8 |
+| LearningPage | 3 (기초, 핵심역량, 심화) | 8 |
+
+### CSS 클래스
+| 클래스 | 용도 |
+|--------|------|
+| `.sidebar-nav-group` | 그룹 래퍼 |
+| `.sidebar-nav-group-toggle` | 토글 버튼 |
+| `.sidebar-nav-group-toggle.open` | 열린 상태 |
+| `.sidebar-nav-group-text` | 라벨 텍스트 |
+| `.sidebar-nav-group-count` | 아이템 개수 배지 |
+| `.sidebar-nav-chevron` | 셰브론 화살표 |
+| `.sidebar-nav-group-items` | 접힘 컨테이너 |
+| `.sidebar-nav-group-items.expanded` | 펼침 상태 |
+| `.sidebar-nav-group-items-inner` | 내부 래퍼 |
 
 ---
 

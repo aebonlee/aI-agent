@@ -466,6 +466,11 @@ html[data-theme="dark"] .tool-external-link {
 html[data-theme="dark"] .tool-external-link:hover {
     background: rgba(61, 109, 181, 0.25);
 }
-html[data-theme="dark"] .sidebar-nav-group-label {
+html[data-theme="dark"] .sidebar-nav-group-toggle:hover {
+    background: rgba(61, 109, 181, 0.08);
+    color: var(--primary-blue-light);
+}
+html[data-theme="dark"] .sidebar-nav-group-count {
+    background: var(--bg-light-gray);
     color: var(--text-light);
 }
