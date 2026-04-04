@@ -610,3 +610,338 @@ html[data-theme="dark"] .toast-info {
     border-color: rgba(59, 130, 246, 0.2);
     color: #93C5FD;
 }
+
+/* ============================================
+   Subpage Dark Mode - Comprehensive Fix
+   var(--primary-blue) text/icon → --primary-blue-light
+   ============================================ */
+
+/* --- Cases Page Dark --- */
+html[data-theme="dark"] .cases-sidebar-title {
+    color: var(--text-light);
+}
+html[data-theme="dark"] .cases-menu-item:hover {
+    color: var(--primary-blue-light);
+}
+html[data-theme="dark"] .cases-menu-item.active .cases-menu-title {
+    color: var(--primary-blue-light);
+}
+html[data-theme="dark"] .cases-menu-desc {
+    color: var(--text-light);
+}
+html[data-theme="dark"] .case-card-icon {
+    background: rgba(61, 109, 181, 0.15);
+    color: var(--primary-blue-light);
+}
+html[data-theme="dark"] .case-card-title {
+    color: #F1F5F9;
+}
+html[data-theme="dark"] .case-card-desc {
+    color: var(--text-secondary);
+}
+html[data-theme="dark"] .case-tag {
+    background: rgba(61, 109, 181, 0.18);
+    color: var(--primary-blue-light);
+}
+
+/* --- Community Page Dark --- */
+html[data-theme="dark"] .community-stat-card {
+    background: var(--bg-white);
+    border-color: var(--border-light);
+}
+html[data-theme="dark"] .community-stat-number {
+    color: var(--primary-blue-light);
+}
+html[data-theme="dark"] .community-stat-label {
+    color: var(--text-secondary);
+}
+html[data-theme="dark"] .post-category,
+html[data-theme="dark"] .post-detail-category {
+    background: rgba(61, 109, 181, 0.18);
+    color: var(--primary-blue-light);
+}
+html[data-theme="dark"] .post-title {
+    color: #F1F5F9;
+}
+html[data-theme="dark"] .post-excerpt {
+    color: var(--text-secondary);
+}
+html[data-theme="dark"] .post-meta {
+    color: var(--text-light);
+}
+html[data-theme="dark"] .post-vote-count {
+    color: var(--text-primary);
+}
+html[data-theme="dark"] .post-vote-btn:hover {
+    border-color: var(--primary-blue-light);
+    color: var(--primary-blue-light);
+}
+html[data-theme="dark"] .post-detail-card {
+    background: var(--bg-white);
+    border-color: var(--border-light);
+}
+html[data-theme="dark"] .post-detail-title {
+    color: #F1F5F9;
+}
+html[data-theme="dark"] .post-detail-body {
+    color: var(--text-secondary);
+}
+html[data-theme="dark"] .post-detail-body h2 {
+    color: #F1F5F9;
+}
+html[data-theme="dark"] .post-detail-body h3 {
+    color: #E2E8F0;
+}
+html[data-theme="dark"] .post-detail-body code {
+    background: var(--bg-light-gray);
+    color: var(--primary-blue-light);
+}
+html[data-theme="dark"] .post-detail-body pre {
+    background: #0F172A;
+    border: 1px solid var(--border-light);
+}
+html[data-theme="dark"] .leaderboard {
+    background: var(--bg-white);
+    border-color: var(--border-light);
+}
+html[data-theme="dark"] .leaderboard-title {
+    color: var(--text-primary);
+}
+html[data-theme="dark"] .leaderboard-name {
+    color: var(--text-primary);
+}
+html[data-theme="dark"] .leaderboard-score {
+    color: var(--primary-blue-light);
+}
+html[data-theme="dark"] .comment-author {
+    color: var(--text-primary);
+}
+html[data-theme="dark"] .comment-text {
+    color: var(--text-secondary);
+}
+html[data-theme="dark"] .comment-action:hover {
+    color: var(--primary-blue-light);
+}
+html[data-theme="dark"] .comments-title {
+    color: var(--text-primary);
+}
+html[data-theme="dark"] .write-post-tool-btn {
+    color: var(--text-secondary);
+}
+html[data-theme="dark"] .write-post-tool-btn:hover {
+    background: var(--bg-light-gray);
+    color: var(--primary-blue-light);
+}
+html[data-theme="dark"] .write-post-tool-btn.active {
+    background: rgba(61, 109, 181, 0.15);
+    color: var(--primary-blue-light);
+}
+html[data-theme="dark"] .write-post-card {
+    background: var(--bg-white);
+    border-color: var(--border-light);
+}
+
+/* --- Content Pages / Sidebar Dark --- */
+html[data-theme="dark"] .content-sidebar h3 {
+    color: var(--text-light);
+}
+html[data-theme="dark"] .sidebar-nav-btn:hover {
+    color: var(--primary-blue-light);
+}
+html[data-theme="dark"] .sidebar-nav-btn.active {
+    background: rgba(61, 109, 181, 0.15);
+    color: var(--primary-blue-light);
+    font-weight: 600;
+}
+html[data-theme="dark"] .sidebar-nav-group-toggle {
+    color: var(--text-light);
+}
+html[data-theme="dark"] .sidebar-nav-chevron {
+    color: var(--text-light);
+}
+
+/* --- Content Card Dark --- */
+html[data-theme="dark"] .content-card h2 {
+    color: #F1F5F9;
+    border-bottom-color: var(--border-light);
+}
+html[data-theme="dark"] .content-card h3 {
+    color: #E2E8F0;
+}
+html[data-theme="dark"] .content-card p {
+    color: var(--text-secondary);
+}
+html[data-theme="dark"] .content-card li {
+    color: var(--text-secondary);
+}
+html[data-theme="dark"] .content-card li strong {
+    color: #F1F5F9;
+}
+
+/* --- Framework Items Dark --- */
+html[data-theme="dark"] .framework-item {
+    background: var(--bg-light-gray);
+    border-left-color: var(--primary-blue-light);
+}
+html[data-theme="dark"] .framework-item h4 {
+    color: #F1F5F9;
+}
+html[data-theme="dark"] .framework-item h4 i {
+    color: var(--primary-blue-light);
+}
+html[data-theme="dark"] .framework-item p {
+    color: var(--text-secondary);
+}
+
+/* --- Curriculum Dark --- */
+html[data-theme="dark"] .curriculum-tabs {
+    border-bottom-color: var(--border-light);
+}
+html[data-theme="dark"] .curriculum-tab {
+    color: var(--text-secondary);
+}
+html[data-theme="dark"] .curriculum-tab:hover {
+    color: var(--primary-blue-light);
+}
+html[data-theme="dark"] .curriculum-tab.active {
+    color: var(--primary-blue-light);
+    border-bottom-color: var(--primary-blue-light);
+}
+html[data-theme="dark"] .curriculum-session-num {
+    color: var(--primary-blue-light);
+    opacity: 0.5;
+}
+html[data-theme="dark"] .curriculum-session-title {
+    color: #F1F5F9;
+}
+html[data-theme="dark"] .curriculum-session-title i {
+    color: var(--primary-blue-light);
+}
+html[data-theme="dark"] .curriculum-session-desc {
+    color: var(--text-secondary);
+}
+html[data-theme="dark"] .curriculum-session-hours {
+    color: var(--text-light);
+}
+html[data-theme="dark"] .curriculum-session-type.lecture {
+    background: rgba(59, 130, 246, 0.15);
+    color: #93C5FD;
+}
+html[data-theme="dark"] .curriculum-session-type.practice {
+    background: rgba(16, 185, 129, 0.15);
+    color: #6EE7B7;
+}
+html[data-theme="dark"] .curriculum-session-type.workshop {
+    background: rgba(249, 115, 22, 0.15);
+    color: #FDBA74;
+}
+html[data-theme="dark"] .curriculum-session-type.presentation {
+    background: rgba(168, 85, 247, 0.15);
+    color: #D8B4FE;
+}
+
+/* --- Materials Dark --- */
+html[data-theme="dark"] .material-icon {
+    background: rgba(61, 109, 181, 0.15);
+    color: var(--primary-blue-light);
+}
+html[data-theme="dark"] .material-title {
+    color: #F1F5F9;
+}
+html[data-theme="dark"] .material-desc {
+    color: var(--text-secondary);
+}
+html[data-theme="dark"] .material-format,
+html[data-theme="dark"] .material-pages {
+    background: var(--bg-medium-gray);
+    color: var(--text-light);
+}
+
+/* --- Tool Cards Dark --- */
+html[data-theme="dark"] .tool-card {
+    border-top-color: var(--primary-blue-light);
+}
+html[data-theme="dark"] .tool-icon {
+    background: rgba(61, 109, 181, 0.15);
+    color: var(--primary-blue-light);
+}
+html[data-theme="dark"] .tool-name-group h3 {
+    color: #F1F5F9;
+}
+html[data-theme="dark"] .tool-category {
+    color: var(--text-light);
+}
+html[data-theme="dark"] .tool-desc {
+    color: var(--text-secondary);
+}
+html[data-theme="dark"] .tool-usecase {
+    background: rgba(61, 109, 181, 0.1);
+    color: var(--primary-blue-light);
+}
+
+/* --- Example Box Dark --- */
+html[data-theme="dark"] .example-box {
+    background: var(--bg-light-gray);
+    border-color: var(--border-light);
+}
+html[data-theme="dark"] .example-box h4 {
+    color: var(--text-light);
+}
+html[data-theme="dark"] .example-box pre {
+    background: #0F172A;
+    border: 1px solid var(--border-light);
+}
+
+/* --- Login Page Dark --- */
+html[data-theme="dark"] .login-logo {
+    color: var(--primary-blue-light);
+}
+html[data-theme="dark"] .login-title {
+    color: var(--text-primary);
+}
+html[data-theme="dark"] .login-subtitle {
+    color: var(--text-secondary);
+}
+html[data-theme="dark"] .login-forgot {
+    color: var(--primary-blue-light);
+}
+html[data-theme="dark"] .login-forgot:hover {
+    color: #93B5FD;
+}
+html[data-theme="dark"] .login-footer {
+    color: var(--text-secondary);
+}
+html[data-theme="dark"] .login-footer-link {
+    color: var(--primary-blue-light);
+}
+html[data-theme="dark"] .login-terms {
+    color: var(--text-light);
+}
+html[data-theme="dark"] .login-terms a {
+    color: var(--primary-blue-light);
+}
+html[data-theme="dark"] .login-divider-text {
+    color: var(--text-light);
+}
+html[data-theme="dark"] .login-remember-label {
+    color: var(--text-secondary);
+}
+
+/* --- Profile Page Dark --- */
+html[data-theme="dark"] .profile-name {
+    color: var(--text-primary);
+}
+html[data-theme="dark"] .profile-email {
+    color: var(--text-secondary);
+}
+
+/* --- Not Found Page Dark --- */
+html[data-theme="dark"] .not-found-title {
+    color: var(--text-primary);
+}
+html[data-theme="dark"] .not-found-desc {
+    color: var(--text-secondary);
+}
+html[data-theme="dark"] .not-found-icon {
+    color: var(--primary-blue-light);
+}
