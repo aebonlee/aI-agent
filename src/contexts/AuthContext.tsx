@@ -36,7 +36,7 @@ export function AuthProvider({ children }) {
         console.error('Google login error:', error.message);
         showToast(t('toast.loginError'), 'error');
       }
-    } catch (err) {
+    } catch (err: any) {
       console.error('Google login error:', err);
       showToast(t('toast.loginError'), 'error');
     }
@@ -54,7 +54,7 @@ export function AuthProvider({ children }) {
         console.error('Kakao login error:', error.message);
         showToast(t('toast.loginError'), 'error');
       }
-    } catch (err) {
+    } catch (err: any) {
       console.error('Kakao login error:', err);
       showToast(t('toast.loginError'), 'error');
     }
@@ -69,7 +69,7 @@ export function AuthProvider({ children }) {
       } else {
         showToast(t('toast.logoutSuccess'), 'success');
       }
-    } catch (err) {
+    } catch (err: any) {
       console.error('Logout error:', err);
       showToast(t('toast.logoutError'), 'error');
     }

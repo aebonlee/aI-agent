@@ -81,7 +81,7 @@ export default function CommunityPage() {
       } else {
         setPosts(data || []);
       }
-    } catch (err) {
+    } catch (err: any) {
       console.error('Posts fetch error:', err);
       showToast(t('toast.fetchPostsError'), 'error');
     }
@@ -103,7 +103,7 @@ export default function CommunityPage() {
         .from(TABLES.POSTS)
         .update({ views: (posts.find(p => p.id === postId)?.views || 0) + 1 })
         .eq('id', postId);
-    } catch (err) {
+    } catch (err: any) {
       console.error('Views update error:', err);
     }
 
@@ -121,7 +121,7 @@ export default function CommunityPage() {
         return;
       }
       setSelectedPost(postData);
-    } catch (err) {
+    } catch (err: any) {
       console.error('Post fetch error:', err);
       showToast(t('toast.fetchPostError'), 'error');
       return;
@@ -141,7 +141,7 @@ export default function CommunityPage() {
       } else {
         setComments(commentData || []);
       }
-    } catch (err) {
+    } catch (err: any) {
       console.error('Comments fetch error:', err);
       showToast(t('toast.fetchCommentsError'), 'error');
     }
@@ -185,7 +185,7 @@ export default function CommunityPage() {
 
       resetForm();
       setView('list');
-    } catch (err) {
+    } catch (err: any) {
       console.error('Post submit error:', err);
       showToast(editingPostId ? t('toast.updatePostError') : t('toast.createPostError'), 'error');
     }
@@ -207,7 +207,7 @@ export default function CommunityPage() {
         showToast(t('toast.deletePostSuccess'), 'success');
         setView('list');
       }
-    } catch (err) {
+    } catch (err: any) {
       console.error('Post delete error:', err);
       showToast(t('toast.deletePostError'), 'error');
     }
@@ -261,7 +261,7 @@ export default function CommunityPage() {
         console.error('Comments refresh error:', fetchErr);
         showToast(t('toast.fetchCommentsError'), 'error');
       }
-    } catch (err) {
+    } catch (err: any) {
       console.error('Comment create error:', err);
       showToast(t('toast.createCommentError'), 'error');
     }
@@ -283,7 +283,7 @@ export default function CommunityPage() {
         showToast(t('toast.deleteCommentSuccess'), 'success');
         setComments(prev => prev.filter(c => c.id !== commentId));
       }
-    } catch (err) {
+    } catch (err: any) {
       console.error('Comment delete error:', err);
       showToast(t('toast.deleteCommentError'), 'error');
     }
