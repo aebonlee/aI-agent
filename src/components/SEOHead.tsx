@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { SITE_CONFIG } from '../config/site';
 import { useLanguage } from '../contexts/LanguageContext';
 
-export default function SEOHead({ title, description, path = '/', image }) {
+export default function SEOHead({ title, description, path = '/', image }: any) {
   const { language } = useLanguage();
   const fullTitle = title ? `${title} | ${SITE_CONFIG.name}` : `${SITE_CONFIG.name} - ${SITE_CONFIG.nameKo}`;
   const desc = description || SITE_CONFIG.description;

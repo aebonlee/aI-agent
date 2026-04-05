@@ -5,9 +5,9 @@ import { useLanguage } from '../../contexts/LanguageContext';
 import { useAuth } from '../../contexts/AuthContext';
 
 export default function Navbar() {
-  const { mode, toggleTheme, colorTheme, setColorTheme, COLOR_OPTIONS } = useTheme();
-  const { language, toggleLanguage, t } = useLanguage();
-  const { user, signOut } = useAuth();
+  const { mode, toggleTheme, colorTheme, setColorTheme, COLOR_OPTIONS }: any = useTheme();
+  const { language, toggleLanguage, t }: any = useLanguage();
+  const { user, signOut }: any = useAuth();
   const location = useLocation();
 
   const [isScrolled, setIsScrolled] = useState(false);

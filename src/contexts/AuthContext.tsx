@@ -8,8 +8,8 @@ const AuthContext = createContext({});
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
-  const { showToast } = useToast();
-  const { t } = useLanguage();
+  const { showToast }: any = useToast();
+  const { t }: any = useLanguage();
 
   useEffect(() => {
     supabase.auth.getSession().then(({ data: { session } }) => {

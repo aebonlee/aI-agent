@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 
-export default function SidebarNav({ groups, activeId, onSelect, headingKo, headingEn }) {
+export default function SidebarNav({ groups, activeId, onSelect, headingKo, headingEn }: any) {
   const { language } = useLanguage();
   const ko = language === 'ko';
 

@@ -33,9 +33,9 @@ function getInitial(name) {
 }
 
 export default function CommunityPage() {
-  const { language, t } = useLanguage();
-  const { user } = useAuth();
-  const { showToast } = useToast();
+  const { language, t }: any = useLanguage();
+  const { user }: any = useAuth();
+  const { showToast }: any = useToast();
   const isKo = language === 'ko';
 
   const [view, setView] = useState('list');

@@ -1,7 +1,7 @@
 import { createContext, useContext, useState, useCallback } from 'react';
 import translations from '../utils/translations';
 
-const LanguageContext = createContext();
+const LanguageContext = createContext<any>(null);
 
 function getCookie(name) {
   const match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));

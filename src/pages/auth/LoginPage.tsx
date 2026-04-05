@@ -5,8 +5,8 @@ import { useLanguage } from '../../contexts/LanguageContext';
 import SEOHead from '../../components/SEOHead';
 
 export default function LoginPage() {
-  const { user, signInWithGoogle, signInWithKakao } = useAuth();
-  const { language, t } = useLanguage();
+  const { user, signInWithGoogle, signInWithKakao }: any = useAuth();
+  const { language, t }: any = useLanguage();
   const navigate = useNavigate();
   const ko = language === 'ko';
 

@@ -1,6 +1,6 @@
 import { createContext, useContext, useState, useEffect, useCallback } from 'react';
 
-const ThemeContext = createContext();
+const ThemeContext = createContext<any>(null);
 
 const COLOR_OPTIONS = [
   { name: 'blue', color: '#1B3A6B' },
