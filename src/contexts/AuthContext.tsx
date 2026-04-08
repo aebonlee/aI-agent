@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useState } from 'react';
-import { supabase } from '../lib/supabase';
+import { supabase, setSharedSession, getSharedSession, clearSharedSession } from '../lib/supabase';
 import { useToast } from './ToastContext';
 import { useLanguage } from './LanguageContext';
 
@@ -12,12 +12,26 @@ export function AuthProvider({ children }) {
   const { t }: any = useLanguage();
 
   useEffect(() => {
-    supabase.auth.getSession().then(({ data: { session } }) => {
+    supabase.auth.getSession().then(async ({ data: { session } }) => {
       setUser(session?.user ?? null);
+      if (session?.refresh_token) {
+        setSharedSession(session.refresh_token);
+      } else {
+        const rt = getSharedSession();
+        if (rt) {
+          try {
+            const { data } = await supabase.auth.refreshSession({ refresh_token: rt });
+            if (!data.session) clearSharedSession();
+          } catch { clearSharedSession(); }
+        }
+      }
       setLoading(false);
     });
 
     const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+      if (session?.refresh_token) setSharedSession(session.refresh_token);
+      if (_event === 'SIGNED_OUT') clearSharedSession();
+
       setUser(session?.user ?? null);
     });
 
