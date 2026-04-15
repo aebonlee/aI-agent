@@ -4,6 +4,7 @@ import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
 import { LicenseProvider } from '../components/LicenseGuard';
 import LockOverlay from '../components/LockOverlay';
+import AdminGuard from '../components/AdminGuard';
 
 const Home = lazy(() => import('../pages/Home'));
 const LearningPage = lazy(() => import('../pages/learning/LearningPage'));
@@ -16,6 +17,7 @@ const ResultsPage = lazy(() => import('../pages/results/ResultsPage'));
 const FaqPage = lazy(() => import('../pages/faq/FaqPage'));
 const CommunityPage = lazy(() => import('../pages/community/CommunityPage'));
 const LoginPage = lazy(() => import('../pages/auth/LoginPage'));
+const AdminDashboard = lazy(() => import('../pages/admin/AdminDashboard'));
 const NotFound = lazy(() => import('../pages/NotFound'));
 
 const Loading = () => (
@@ -45,6 +47,7 @@ export default function PublicLayout() {
             <Route path="/faq" element={<FaqPage />} />
             <Route path="/community" element={<CommunityPage />} />
             <Route path="/login" element={<LoginPage />} />
+            <Route path="/admin" element={<AdminGuard><AdminDashboard /></AdminGuard>} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>

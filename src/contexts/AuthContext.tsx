@@ -1,5 +1,6 @@
 import { createContext, useContext, useEffect, useState } from 'react';
 import { supabase, setSharedSession, getSharedSession, clearSharedSession } from '../lib/supabase';
+import { isAdmin as isAdminEmail } from '../config/admin';
 import { useToast } from './ToastContext';
 import { useLanguage } from './LanguageContext';
 
@@ -90,7 +91,7 @@ export function AuthProvider({ children }) {
   };
 
   return (
-    <AuthContext.Provider value={{ user, loading, signInWithGoogle, signInWithKakao, signOut }}>
+    <AuthContext.Provider value={{ user, loading, isAdmin: isAdminEmail(user?.email), signInWithGoogle, signInWithKakao, signOut }}>
       {children}
     </AuthContext.Provider>
   );
