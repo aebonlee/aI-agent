@@ -37,16 +37,6 @@ export function AuthProvider({ children }) {
       setUser(session?.user ?? null);
     });
 
-
-  // 10분 무동작 세션 타임아웃
-  useIdleTimeout({
-    enabled: !!user,
-    onTimeout: () => {
-      supabase.auth.signOut();
-      clearSharedSession();
-    },
-  });
-
     return () => subscription.unsubscribe();
   }, []);
 
@@ -100,6 +90,16 @@ export function AuthProvider({ children }) {
       showToast(t('toast.logoutError'), 'error');
     }
   };
+
+
+  // 10분 무동작 세션 타임아웃
+  useIdleTimeout({
+  enabled: !!user,
+  onTimeout: () => {
+  supabase.auth.signOut();
+  clearSharedSession();
+  },
+  });
 
   return (
     <AuthContext.Provider value={{ user, loading, isAdmin: isAdminEmail(user?.email), signInWithGoogle, signInWithKakao, signOut }}>
