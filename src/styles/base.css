@@ -8,6 +8,16 @@
     box-sizing: border-box;
 }
 
+/* Sticky Footer Layout */
+.site-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.site-main {
+    flex: 1;
+}
+
 :root {
     --primary-blue: #1B3A6B;
     --primary-blue-dark: #0F2444;

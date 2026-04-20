@@ -29,10 +29,10 @@ const Loading = () => (
 export default function PublicLayout() {
   return (
     <LicenseProvider>
-    <>
+    <div className="site-wrapper">
       <a href="#main-content" className="skip-nav">본문 바로가기</a>
       <Navbar />
-      <main id="main-content">
+      <main id="main-content" className="site-main">
         <Suspense fallback={<Loading />}>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -54,7 +54,7 @@ export default function PublicLayout() {
       </main>
       <Footer />
       <LockOverlay />
-    </>
+    </div>
     </LicenseProvider>
   );
 }
